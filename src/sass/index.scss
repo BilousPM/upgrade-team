@@ -1,2 +1,11 @@
-@import './common';
-@import './example';
+// utils styles
+@import './utils/modules';
+
+// base styles
+@import './base/modules';
+
+// components styles
+@import './components/modules';
+
+// layout
+@import './layout/modules';
