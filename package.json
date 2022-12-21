@@ -1,21 +1,21 @@
 {
-  "name": "under-graund-9",
+  "name": "upgrade-team",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://BilousPM.github.io/under-graund-9",
+  "homepage": "https://BilousPM.github.io/upgrade-team",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /under-graund-9/"
+    "build": "parcel build src/*.html --public-url /upgrade-team/"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/BilousPM/under-graund-9.git"
+    "url": "git+https://github.com/BilousPM/upgrade-team.git"
   },
   "keywords": [],
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/BilousPM/under-graund-9/issues"
+    "url": "https://github.com/BilousPM/upgrade-team/issues"
   },
   "dependencies": {
     "modern-normalize": "^1.1.0"
