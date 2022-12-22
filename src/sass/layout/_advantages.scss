@@ -1,0 +1,116 @@
+.advantages {
+  padding-top: 50px;
+  padding-bottom: 64px;
+  outline: 2px solid rgb(231, 194, 188) ;
+  position: relative;
+
+  @media screen and(min-width: 768px) {
+    padding-top: 86px;
+    padding-bottom: 204px;
+  }
+
+  @media screen and(min-width: 1200px) {
+    padding-top: 99px;
+    padding-bottom: 178px;
+  }
+}
+.advantages__list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: center;
+
+  @media screen and(min-width: 768px) {
+    flex-direction: row;
+    gap: 80px;
+  }
+
+  @media screen and(min-width: 1200px) {
+    gap: 32px;
+  }
+  position: relative;
+}
+
+.advantages__item {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  width: 230px;
+
+  @media screen and(min-width: 768px) {
+    gap: 12px;
+    width: calc((100% - 160px) / 3);
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
+  @media screen and(min-width: 1200px) {
+    width: calc((100% - 64px) / 3);
+
+    padding-right: 47px;
+    padding-left: 47px;
+  }
+}
+
+.advantages__item::before {
+  content: '';
+  width: 50px;
+  height: 50px;
+
+  background-color: $interactive-color;
+  border-radius: 50%;
+
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.advantages__item--cow::before {
+  background-image: url(../images/advantages/cow.png);
+}
+
+.advantages__item--weight::before {
+  background-image: url(../images/advantages/weight.png);
+}
+
+.advantages__item--ice-cream::before {
+  background-image: url(../images/advantages/ice-cream.png);
+}
+
+.advantages__value {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.22;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  padding-top: 10px;
+
+  @media screen and(min-width: 768px) {
+    font-size: 48px;
+    text-transform: none;
+    padding-top: 20px;
+  }
+
+  @media screen and(min-width: 1200px) {
+    font-size: 58px;
+    padding-top: 28px;
+  }
+}
+
+.advantages__text {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.7;
+  text-align: center;
+
+  @media screen and(min-width: 768px) {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.74;
+  }
+
+  @media screen and(min-width: 1200px) {
+    line-height: 1.76;
+  }
+}
