@@ -1,25 +1,68 @@
-<section class="hero section">
-  <h1>ice cream made with passion</h1>
-  <ul class="hero__list">
-    <li><a href="">Products</a></li>
-    <li><a href="">How it’s made?</a></li>
-  </ul>
-  <img src="./images/hero/много мороженок 1.png" alt="meni ice cream" />
-  <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et
-  </p>
-  <ul>
-    <li>
-      <h2>16</h2>
-      <p>cafes</p>
-    </li>
-    <li>
-      <h2>23</h2>
-      <p>food trucks</p>
-    </li>
-  </ul>
-  <img src="./images/hero/desktop.jpg" alt="Big ice" />
+<section class="hero">
+  <div class="container">
+    <div class="hero-left">
+      <h1 class="hero-title">
+        ice cream made with <span class="hero-title-accent">passion</span>
+      </h1>
+      <ul class="hero-nav list">
+        <li class="hero-nav-item">
+          <button class="hero-nav-button">Products</button>
+        </li>
+        <li class="hero-nav-item">
+          <button class="hero-nav-btn">How its made?</button>
+        </li>
+      </ul>
+
+      <div class="hero-info">
+        <img
+          class="hero-info-imag"
+          srcset="
+            ./images/hero/plate_t@1x_152.png 152w,
+            ./images/hero/plate_d@1x_225.png 225w,
+            ./images/hero/plate_t@2x_304.png 304w,
+            ./images/hero/plate_d@2x_450.png 450w
+          "
+          sizes="(min-width: 1200px) 225px,(min-width: 768px) 152px, 100vw"
+          src="./images/hero/много мороженок 1.png"
+          alt="meny ice cream"
+        />
+        <div class="hero-info-content">
+          <p class="hero-info-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et
+          </p>
+          <img src="./images/hero/arrow.png" alt="arrow" />
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-advant">
+      <img
+        class="hero-advant-imag"
+        srcset="
+          ./images/hero/ice_m@1x_177.png 177w,
+          ./images/hero/ice_t@1x_268.png 268w,
+          ./images/hero/ice_m@2x_354.png 354w,
+          ./images/hero/ice_d@1x_456.png 456w,
+          ./images/hero/ice_t@2x_536.png 536w,
+          ./images/hero/ice_d@2x_912.png 912w
+        "
+        sizes="(min-width: 1200px) 456px,(min-width: 768px) 268px,(min-width: 320px) 177px, 100vw"
+        src="./images/hero/desktop.png"
+        alt="Big ice"
+      />
+      <ul class="hero-advant-list list">
+        <li class="hero-advant-item">
+          <h2 class="hero-advant-title">16</h2>
+          <p class="hero-advant-text">cafes</p>
+        </li>
+        <li class="hero-advant-item">
+          <h2 class="hero-advant-title">23</h2>
+          <p class="hero-advant-text">food trucks</p>
+        </li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 <!-- <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,600;0,700;0,800;0,900;1,300&family=Seymour+One&display=swap" rel="stylesheet"> -->
