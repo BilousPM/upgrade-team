@@ -13,11 +13,9 @@
   @media screen and (min-width: 768px) {
     font-weight: 800;
     font-size: 22px;
-    line-height: calc(27 / 22);
   }
   @media screen and (min-width: 1200px) {
     font-size: 30px;
-    line-height: calc(37 / 30);
   }
 
   letter-spacing: 0.04em;
@@ -31,12 +29,10 @@
 
   @media screen and (min-width: 768px) {
     font-size: 34px;
-    line-height: calc(43 / 34);
   }
 
   @media screen and (min-width: 1200px) {
     font-size: 36px;
-    line-height: calc(45 / 36);
   }
 
   letter-spacing: 0.06em;

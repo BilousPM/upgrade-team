@@ -1,7 +1,7 @@
 <section class="about">
   <div class="container">
     <label class="about__label">tradition and love</label>
-    <h2 class="about__title">how it’s made?</h2>
+    <h2 class="about__title" id="about">how it’s made?</h2>
     <div class="about__block">
       <div class="about__foto">
         <picture>
@@ -45,9 +45,11 @@
         <p class="about__text about__text--notMargin">
           This is enough to choose ice cream and coffee for any mood!
         </p>
-        <button class="about__button">
+        <button class="about__button" type="button">
           Read more
-          <img src="./images/about/btn.svg" alt="" width="12" height="12" />
+          <svg width="12" height="12">
+            <use href="./images/about/btn.svg"></use>
+          </svg>
         </button>
       </div>
     </div>
