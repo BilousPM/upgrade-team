@@ -1,12 +1,40 @@
 .hero {
   padding-top: 99px;
 
+  background-size: contain;
+  background-position: bottom;
+  background-repeat: no-repeat;
+
+  background-image: url(../images/hero/dots_m@1x_320.png);
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/hero/dots_m@2x_640.png);
+  }
+
   @media screen and (min-width: 768px) {
     padding-top: 80px;
+
+    background-image: url(../images/hero/dots_t@1x_768.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/hero/dots_t@2x_1536.png);
+    }
   }
 
   @media screen and (min-width: 1200px) {
     padding-top: 118px;
+
+    background-image: url(../images/hero/dots_d@1x_1200.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/hero/dots_d@2x_2400.png);
+    }
   }
 }
 
