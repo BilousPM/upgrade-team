@@ -9,7 +9,7 @@
   padding: 0;
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
+  clip-path: inset(50%);
   margin: -1px;
 }
 
@@ -42,8 +42,8 @@ img {
 
 body {
   font-family: Montserrat, sans-serif;
-  background-color: #84A178;
-  color: #FCFCFC;
+  background-color: #84a178;
+  color: #fcfcfc;
   font-size: 14px;
 }
 
@@ -97,7 +97,7 @@ body {
   right: 0;
   bottom: 0;
   transform: translateY(24px);
-  content: "";
+  content: '';
   display: block;
   width: 216px;
   height: 1px;
@@ -141,7 +141,7 @@ body {
   text-align: center;
   text-transform: uppercase;
   border-radius: 4px;
-  background-color: #F8D24E;
+  background-color: #f8d24e;
 }
 
 .contacts__text--location {
@@ -174,9 +174,9 @@ body {
   padding: 12px 40px;
   min-width: 196px;
   min-height: 42px;
-  background-color: #F8D24E;
+  background-color: #f8d24e;
   color: #131313;
-  font-family: "Montserrat";
+  font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
   font-size: 12px;
@@ -187,11 +187,11 @@ body {
   transition: background-color 250ms linear, color 250ms linear;
 }
 .button:hover {
-  background-color: #0A8817;
+  background-color: #0a8817;
 }
 .button:focus {
-  background-color: #0A8817;
-  color: #FCFCFC;
+  background-color: #0a8817;
+  color: #fcfcfc;
 }
 
 .button__icon {
@@ -201,11 +201,12 @@ body {
 .button--secondary {
   box-sizing: border-box;
   padding: 10px 55px;
-  border: 2px solid #F8D24E;
+  border: 2px solid #f8d24e;
   background-color: transparent;
 }
-.button--secondary:hover, .button--secondary:focus {
-  border-color: #0A8817;
+.button--secondary:hover,
+.button--secondary:focus {
+  border-color: #0a8817;
 }
 
 @media screen and (min-width: 768px) {
@@ -294,4 +295,4 @@ body {
   .contacts_btnList {
     gap: 16px;
   }
-}/*# sourceMappingURL=index.css.map */
+} /*# sourceMappingURL=index.css.map */

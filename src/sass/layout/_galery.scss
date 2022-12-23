@@ -1,0 +1,70 @@
+
+.swiper {
+
+}
+.swiper-wrapper{ 
+     display: flex ;
+margin: 0 auto ;
+}
+.gallery{
+    // position: absolute;
+    z-index: 333;
+    width: 100%;
+    margin: 0 auto;
+    bottom: -32;
+   @include for-size (phone) {
+    bottom: -32;
+}
+@include for-size (tablet) {
+    bottom: -114;
+}
+@include for-size (desktop) {
+    bottom: -98;
+}
+ 
+} 
+
+.slide{
+    margin: 0 auto;
+    @include for-size (phone) {
+        display: block;
+       width:  280px;
+       height: auto;
+       border-radius: 8px;
+       margin-left: 20px;
+        margin-right: 20px;
+    }
+    
+    @include for-size (tablet) {
+       // max-width: 100%;
+       display: flex;
+      width:  704px;
+      height: 327px;
+      border-radius: 18px;
+      margin-left: auto;
+       margin-right: auto;
+   }
+
+   
+   @include for-size (desktop)
+   {
+        display: flex;
+       width:  1013px;
+        height: 422px;
+      border-radius: 24px;
+      margin-left: auto;
+      margin-right: auto;
+       
+ 
+   }
+
+ }  
+ .swiper-image{
+    max-width: 100%;
+    display: block;
+    margin: 0 auto;
+    justify-content: center;
+    background-color: transparent;
+ }
+
+
