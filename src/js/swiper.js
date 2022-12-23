@@ -23,7 +23,7 @@ const swiper = new Swiper('.swiper', {
         ReleaseOnEdges: true,
       },
        autoplay: {
-        delay: 16000,
+        delay: 13000,
         stopOnLastSlide: false,
         disableOnInteraction: false
      } , 
