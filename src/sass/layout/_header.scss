@@ -1,0 +1,161 @@
+.header {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-top: 8px;
+    position: relative;
+}
+
+.header__logo {
+    display: inline-flex;
+    width: 40px;
+    height: 37px;
+    background-image: url("../images/header/logo-mob.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    justify-content: " ";
+    cursor: url("../images/header/vector.png"), pointer;
+
+    margin-left: 0;
+    margin-right: auto;
+
+    @media screen and (min-width: 768px) {
+        width: 48px;
+        height: 44px;
+        background-image: url("../images/header/logo-tabl.png");
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 60px;
+        height: 65px;
+        background-image: url("../images/header/logo-des.png");
+    }
+
+}
+
+.header__nav {
+   display: none;
+
+@media screen and (min-width: 1200px) {
+   display: flex; 
+   gap: 28px;}
+}
+
+.nav__link{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(20 / 16);
+    text-align: center;
+    padding-top: 32px;
+    padding-bottom: 13px;
+    color: $primary-color;
+    cursor: url("../images/header/vector.png"), pointer;
+    &:hover {
+        color: $interactive-color;  
+    }
+
+    &:focus {
+    color: $interactive-color;
+    }
+
+}
+
+.header__button {
+    display: none;
+@media screen and (min-width: 768px) {
+display:block
+}
+    position: relative;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: calc(17 / 14);
+    
+    padding: 12px;
+    padding-left: 36px;
+    padding-right: 51px;
+
+    color: $secondary-color;
+    background-color: $interactive-color;
+    border-radius: 10px;
+    border-color: transparent;
+    margin-top: 4px;
+    margin-bottom: 0px;
+    margin-left: 0;
+    margin-right: 0;
+    cursor: url("../images/header/vector.png"), pointer;
+    @media screen and (min-width: 1200px) {
+    margin-top: 20px;
+    margin-left: auto;
+    margin-bottom: 3px;
+    } 
+
+    &:hover {
+        background-color: $accent-color;
+    }
+    &:focus {
+        background-color: $accent-color;
+        color: $primary-color;
+    }
+    
+}
+.arrow {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    fill: currentColor;
+    right: 35px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    }
+
+.button__hamburger {
+    display: inline-flex;
+    
+    position: relative;
+    width:32px ;
+    height: 32px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    margin-left: auto;
+    margin-right: 0;
+    margin-top: 5px;
+
+    @media screen and (min-width: 768px) {
+        margin-right: 32px;
+        margin-top: 9px;
+        margin-bottom: 5px;
+    }
+
+        @media screen and (min-width: 1200px) {
+            display: none;}
+}
+.hamburger {
+    display: block;
+    position: absolute;
+    background: $primary-color;
+    width: 24px;
+    height: 3px;
+    top: 60%;
+    border-radius: 2px;
+
+}
+
+.hamburger::before,
+.hamburger::after {
+    position: absolute;
+    display: block;
+    width: 24px;
+    height: 3px;
+    border-radius: 2px;
+    background-color: $primary-color;
+    content: "";
+        
+} 
+
+.hamburger::before{top: -8px;}
+.hamburger::after{bottom: -8px;}
+ 
+

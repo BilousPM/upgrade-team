@@ -1,0 +1,259 @@
+/* === FOOTER ==== */
+
+.footer {
+  &-upper-container {
+    padding: 0 20px 40px;
+
+    @include only-tablet {
+      padding: 0 32px 32px 33px;
+    }
+
+    @include only-desktop {
+      padding: 60px 16px;
+    }
+
+    @include tablet-and-desktop {
+      display: flex;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+  }
+
+  &-lower-container {
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    border-top: 1px solid #e1e1e1;
+
+    @include only-tablet {
+      padding: 12px 20px 12px 42px;
+    }
+
+    @include only-desktop {
+      padding: 12px 0;
+
+      width: 1168px;
+    }
+
+    @include tablet-and-desktop {
+      flex-direction: row;
+    }
+  }
+
+  &__title-wrap {
+    margin-bottom: 60px;
+    width: 234px;
+
+    @include only-tablet {
+      width: 352px;
+    }
+
+    @include only-desktop {
+      width: 504px;
+    }
+
+    @include tablet-and-desktop {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: calc(22 / 18);
+    text-transform: uppercase;
+
+    @include only-tablet {
+      font-size: 26px;
+      line-height: calc(32 / 26);
+    }
+
+    @include only-desktop {
+      font-weight: 400;
+      font-size: 30px;
+      line-height: calc(57 / 30);
+    }
+
+    @include tablet-and-desktop {
+      letter-spacing: 0.04em;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 16px;
+
+      @include only-tablet {
+        margin-bottom: 8px;
+      }
+
+      @include only-desktop {
+        margin-bottom: 14px;
+      }
+    }
+
+    &--big {
+      font-size: 34px;
+      line-height: calc(41 / 34);
+      letter-spacing: 0.04em;
+
+      @include only-tablet {
+        font-size: 48px;
+        line-height: calc(59 / 48);
+      }
+
+      @include only-desktop {
+        font-weight: 700;
+        font-size: 58px;
+        line-height: calc(71 / 58);
+      }
+
+      @include tablet-and-desktop {
+        letter-spacing: 0.06em;
+      }
+    }
+  }
+
+  &__contacts-wrap {
+    display: flex;
+    flex-direction: column;
+
+    @include only-tablet {
+      margin-top: 61px;
+    }
+
+    @include only-desktop {
+      justify-content: end;
+    }
+  }
+
+  &__phone-wrap {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+  }
+
+  &__phone-text {
+    margin-right: 4px;
+
+    font-weight: 700;
+    font-size: 12px;
+    line-height: calc(22 / 12);
+
+    color: $secondary-color;
+
+    @include only-tablet {
+      font-size: 14px;
+      line-height: calc(26 / 14);
+    }
+
+    @include only-desktop {
+      font-size: 16px;
+      line-height: calc(30 / 16);
+      letter-spacing: 0.02em;
+    }
+  }
+
+  &__phone-link {
+    font-weight: 700;
+    font-size: 12px;
+    line-height: calc(22 / 12);
+
+    color: $primary-color;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    @include only-tablet {
+      font-size: 14px;
+      line-height: calc(26 / 14);
+    }
+
+    @include only-desktop {
+      font-size: 16px;
+      line-height: calc(30 / 16);
+      letter-spacing: 0.02em;
+    }
+
+    &:hover,
+    &:focus {
+      color: $interactive-color;
+    }
+  }
+
+  &__rights {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: calc(21 / 14);
+    text-transform: capitalize;
+
+    color: #7a7a7a;
+
+    @include only-tablet {
+      line-height: calc(26 / 14);
+    }
+
+    @include only-desktop {
+      font-size: 12px;
+      line-height: calc(22 / 12);
+    }
+
+    @include tablet-and-desktop {
+      letter-spacing: 0.02em;
+    }
+
+    &:not(:last-child) {
+      @include tablet-and-desktop {
+        margin-right: 4px;
+      }
+    }
+  }
+}
+
+.social-contacts {
+  &__list {
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: flex-end;
+
+    @include only-tablet {
+      margin-bottom: 34px;
+    }
+
+    @include only-desktop {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 20px;
+
+    @include tablet-and-desktop {
+      margin-right: 30px;
+    }
+  }
+}
+
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+
+  background-color: $interactive-color;
+
+  &-icon {
+    fill: $bcg-color;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover &-icon,
+  &:focus &-icon {
+    fill: $primary-color;
+  }
+}
