@@ -1,3 +1,4 @@
+
 // Flex-center-2-axis
 
 @mixin flexCenteringXY($flex-type: flex) {
@@ -80,3 +81,27 @@
         }
     }
 }
+// Mixin for tablet styles
+
+@mixin only-tablet {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+// Mixin for desktop styles
+
+@mixin only-desktop {
+  @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+// Mixin for common tablet and desktop styles
+
+@mixin tablet-and-desktop {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
