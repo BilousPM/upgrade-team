@@ -1,28 +1,24 @@
 
+.ice-swiper{
+    position: relative;
+  }
 .swiper {
-
-}
-.swiper-wrapper{ 
-     display: flex ;
-margin: 0 auto ;
-}
-.gallery{
-    // position: absolute;
+    position: absolute;
     z-index: 333;
     width: 100%;
     margin: 0 auto;
-    bottom: -32;
+ 
    @include for-size (phone) {
-    bottom: -32;
+    top: -32px;
 }
 @include for-size (tablet) {
-    bottom: -114;
+    top: -114px;
 }
 @include for-size (desktop) {
-    bottom: -98;
+   top: -98px;
 }
- 
 } 
+
 
 .slide{
     margin: 0 auto;
@@ -31,6 +27,7 @@ margin: 0 auto ;
        width:  280px;
        height: auto;
        border-radius: 8px;
+       
        margin-left: 20px;
         margin-right: 20px;
     }
@@ -52,6 +49,7 @@ margin: 0 auto ;
        width:  1013px;
         height: 422px;
       border-radius: 24px;
+      border: 1px solid #84A178;
       margin-left: auto;
       margin-right: auto;
        
@@ -63,6 +61,7 @@ margin: 0 auto ;
     max-width: 100%;
     display: block;
     margin: 0 auto;
+    border: 1px solid #84A178;
     justify-content: center;
     background-color: transparent;
  }
