@@ -359,10 +359,10 @@
     }
 
     .location-btn {
-      min-width: 134px;
+      width: 134px;
      
       @media screen and (min-width: 768px) {
-        min-width: 145px;
+        width: 145px;
       }
     }
 
