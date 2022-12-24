@@ -1,23 +1,16 @@
 .header {
     display: flex;
-    text-align: center;
-    justify-content: center;
-    padding-top: 8px;
-    position: relative;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .header__logo {
-    display: inline-flex;
     width: 40px;
     height: 37px;
     background-image: url("../images/header/logo-mob.png");
     background-repeat: no-repeat;
     background-size: contain;
-    justify-content: " ";
     cursor: url("../images/header/vector.png"), pointer;
-
-    margin-left: 0;
-    margin-right: auto;
 
     @media screen and (min-width: 768px) {
         width: 48px;
@@ -109,53 +102,32 @@ display:block
     transform: translateY(-50%);
 
     }
-
-.button__hamburger {
-    display: inline-flex;
-    
-    position: relative;
-    width:32px ;
-    height: 32px;
-    background-color: transparent;
-    outline: none;
-    border: none;
-    margin-left: auto;
-    margin-right: 0;
-    margin-top: 5px;
-
-    @media screen and (min-width: 768px) {
-        margin-right: 32px;
-        margin-top: 9px;
-        margin-bottom: 5px;
-    }
-
-        @media screen and (min-width: 1200px) {
-            display: none;}
-}
-.hamburger {
-    display: block;
-    position: absolute;
-    background: $primary-color;
-    width: 24px;
-    height: 3px;
-    top: 60%;
-    border-radius: 2px;
-
-}
-
-.hamburger::before,
-.hamburger::after {
-    position: absolute;
-    display: block;
-    width: 24px;
-    height: 3px;
-    border-radius: 2px;
-    background-color: $primary-color;
-    content: "";
-        
-} 
-
-.hamburger::before{top: -8px;}
-.hamburger::after{bottom: -8px;}
  
+.menu-toggle {
+   display: flex;
+   align-items: center;
+   justify-content: center;
 
+   min-height: 32px;
+   min-width: 32px;
+   padding-top: 17px;
+   padding-bottom: 17px;
+   fill: #ffffff;
+   background-color: transparent;
+   cursor: pointer;
+   border: none;
+   outline: none;
+}
+
+@media (min-width: 1200px) {
+   .menu-toggle {
+   display: none;
+  }
+}
+
+.btn__wrap {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    align-items: center;
+}
