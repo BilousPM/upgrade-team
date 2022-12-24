@@ -108,7 +108,7 @@
   }
 
      @media screen and (min-width: 768px) {
-         height: 42px;
+        height: 42px;
         padding: 11px 16px;
 
         .modal-form-field::placeholder{
@@ -116,6 +116,9 @@
       }
     }
 
+    &:not(:placeholder-shown):required:invalid {
+        border-color: red;
+    }
   }
   
   .modal-form-message {
@@ -230,6 +233,25 @@
     }       
 }
 
+
+  .modal-form-chekbox {
+    appearance: none;
+    border-radius: 15px;
+    width: 136px;
+    height: 138px;
+  
+    outline: 2px solid transparent;    
+    outline-offset: -2px;     
+    transition: outline-color 250ms linear;
+  
+   
+  }
+
+  .modal-productsitem .modal-form-chekbox:checked {
+    outline-color: $accent-color;
+    box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
+  }
+
 .product-categories{
     margin-top: 84px;
     margin-bottom: 32px;
@@ -267,9 +289,13 @@
 }
 
 .modal-productswrap {
+    position: absolute;
+    top: 0;
+    left: auto;
     height: 136px;
     width: 132px;
-
+    border-radius: 15px;
+    
     &:not(:last-child) {
         margin-bottom: 20px;
     

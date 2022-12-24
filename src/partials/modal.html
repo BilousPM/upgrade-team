@@ -11,34 +11,41 @@
         <div class="product-categories">
             <ul class="productslist modal-productsitem list">
                 <li class="productsitem modal-productsitem">
-                  <div class="productspictures modal-productspictures productspicture--green-section"></div>
-                  <div class="productswrap modal-productswrap modal-productswrap--green-section">
-                    <h3 class="modal-productssubtitle">ice cream</h3>
-                  </div>
+                    <label>
+                        <input class="modal-form-chekbox" type="checkbox" name="product-categories" value="ice cream" checked />
+                            <div class="productswrap modal-productswrap modal-productswrap--green-section">
+                                <h3 class="modal-productssubtitle">ice cream</h3>
+                            </div>
+                   </label>
+                   <div class="productspictures modal-productspictures productspicture--green-section"></div>
                 </li>          
                 <li class="productsitem modal-productsitem">
-                  <div class="productspictures modal-productspictures productspicture--orange-section"></div>
-                  <div class="productswrap modal-productswrap productswrap--orange-section">
-                    <h3 class="modal-productssubtitle">ice coffee</h3>
-                   </div>
-                </li>
+                    <label>
+                        <input class="modal-form-chekbox" type="checkbox" name="product-categories" value="ice coffee" checked />
+                        <div class="productswrap modal-productswrap productswrap--orange-section">
+                            <h3 class="modal-productssubtitle">ice coffee</h3>
+                        </div>        
+                    </label>
+                    <div class="productspictures modal-productspictures productspicture--orange-section"></div>    
+                 </li>
           <li class="productsitem modal-productsitem">
-                  <div
-                    class="productspictures modal-productspictures productspicture--terracotta-section"
-                  ></div>
-                  <div class="productswrap modal-productswrap modal-productswrap--terracotta-section">
-                    <h3 class="modal-productssubtitle">milkshakes</h3>
-                  </div>
+                <label>
+                    <input class="modal-form-chekbox" type="checkbox" name="product-categories" value="milkshakes" checked />
+                        <div class="productswrap modal-productswrap modal-productswrap--terracotta-section">
+                            <h3 class="modal-productssubtitle">milkshakes</h3>
+                        </div>
+                </label>
+                <div class="productspictures modal-productspictures productspicture--terracotta-section"></div>
                 </li>
               </ul>
         </div> 
         <form class="modal-form" name="modal_form">
         <div class="modal-form-group" role="group">
         <lable class="modal-form-lable" for="user_name">
-            <input class="modal-form-field" type="text" name="user_name" id="user_name" placeholder="Name">
+            <input class="modal-form-field" type="text" name="user_name" id="user_name" placeholder="Name" required minlength="3">
         </lable>
         <lable class="modal-form-lable" for="user_phone">
-            <input class="modal-form-field" type="tel" name="user_phone" id="user_phone" placeholder="Phone">
+            <input class="modal-form-field" type="tel" name="user_phone" id="user_phone" placeholder="Phone" required pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" title="Номер должен +380">
         </lable>
             <lable class="modal-form-lable" for="user_message">
             <textarea class="modal-form-message" name="user_message" id="user_message" rows="6" placeholder="Comment" ></textarea>
@@ -78,11 +85,9 @@
         </svg>
     </button>
     <iframe class="modal-map" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d32240.21975904609!2d30.483888098717618!3d50.48284434240245!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sua!4v1671738189422!5m2!1sru!2sua" width="224" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <!-- <button class="modal-form-btn location-btn" type="button"> -->
         <a class="modal-form-btn location-btn link" href="https://goo.gl/maps/CPtrU1FHBa2aNyZL9"
                 target="_blank"
                 rel="noopener noreferrer nofollow">Open map</a>
-                <!-- Open map</button> -->
 </div>  
 </div>
 
@@ -100,13 +105,13 @@
         <form class="modal-form" name="modal_form">
         <div class="modal-form-group" role="group">
         <lable class="modal-form-lable" for="user_name">
-            <input class="modal-form-field" type="text" name="user_name" id="user_name" placeholder="Name">
+            <input class="modal-form-field" type="text" name="user_name" id="user_name" placeholder="Name" required minlength="3">
         </lable>
         <lable class="modal-form-lable" for="user_phone">
-            <input class="modal-form-field" type="tel" name="user_phone" id="user_phone" placeholder="Phone">
+            <input class="modal-form-field" type="tel" name="user_phone" id="user_phone" placeholder="Phone" required pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" title="Номер должен +380">
         </lable>
         <lable class="modal-form-lable" for="user_email">
-            <input class="modal-form-field" type="email" name="user_email" id="user_email" placeholder="Email">
+            <input class="modal-form-field" type="email" name="user_email" id="user_email" placeholder="Email" required pattern="^\S+@\S+\.\S+$" title="example@mail.com">
         </lable>
             <lable class="modal-form-lable" for="user_message">
             <textarea class="modal-form-message" name="user_message" id="user_message" rows="6" placeholder="Comment" ></textarea>
@@ -174,10 +179,10 @@
     <form class="modal-form" name="modal_form">
     <div class="modal-form-group" role="group">
     <lable class="modal-form-lable" for="user_name">
-        <input class="modal-form-field" type="text" name="user_name" id="user_name" placeholder="Name">
+        <input class="modal-form-field" type="text" name="user_name" id="user_name" placeholder="Name" required minlength="3">
     </lable>
     <lable class="modal-form-lable" for="user_phone">
-        <input class="modal-form-field" type="tel" name="user_phone" id="user_phone" placeholder="Phone">
+        <input class="modal-form-field" type="tel" name="user_phone" id="user_phone" placeholder="Phone" required pattern="[\+]\d{3}\s[\(]\d{2}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" title="Номер должен +380">
     </lable>
     <lable class="modal-form-lable" for="user_message">
         <textarea class="modal-form-message" name="user_message" id="user_message" rows="6" placeholder="Comment" ></textarea>
