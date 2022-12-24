@@ -1,6 +1,14 @@
-.menu {
-  gap: 32px;
+.menu__container {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+
   background-color: #85a279;
+  z-index: 999;
 
   @media screen and (min-width: 768px) {
     background-color: #97af8d;
@@ -40,21 +48,65 @@
   }
 }
 
+.menu-close-item {
+  margin-top: 16px;
+  margin-right: 20px;
+}
+
+.menu__list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+
+  //padding: 0;
+  //margin: 0;
+  //margin-bottom: auto;
+}
+
+/*.menu__list:nth-child(2) {
+  color: $secondary-color;
+}
+
+
+.link-item:nth-child(2) {
+  color: rgb(23 12 8);
+}*/
+
 .menu__link {
   font-weight: 700;
   font-size: 32px;
+  line-height: calc(39 / 32);
   color: $primary-color;
+
+  display: block;
+  align-items: center;
+  text-align: center;
 
   @media screen and (min-width: 768px) {
     font-weight: 700;
     font-size: 48px;
+    line-height: calc(59 / 48);
   }
 }
+
+.accent {
+  color: $secondary-color;
+}
+
+/*.menu__link:nth-child(2) {
+  color: $secondary-color;
+}*/
 
 .menu__link-accent {
   font-weight: 700;
   font-size: 32px;
+  line-height: calc(39 / 32);
   color: $secondary-color;
+
+  display: block;
+  gap: 32px;
+  align-items: center;
+  text-align: center;
 
   @media screen and (min-width: 768px) {
     font-weight: 700;
@@ -63,8 +115,10 @@
 }
 
 .menu-btn {
-  display: flex;
-  position: absolute;
+  height: 42px;
+  width: 152px;
+  display: inline-flex;
+  position: relative;
   align-items: center;
   justify-content: center;
 
@@ -73,18 +127,17 @@
   font-size: 14px;
   line-height: calc(17 / 14);
 
-  padding: 12px;
-  padding-left: 36px;
-  padding-right: 51px;
+  //padding: 12px;
+  //padding-left: 36px;
+  //padding-right: 51px;
 
   color: $secondary-color;
   background-color: $interactive-color;
   border-radius: 10px;
   border-color: transparent;
-  margin-top: 110px;
-  margin-bottom: 0px;
-  margin-left: 0;
-  margin-right: 0;
+  margin: auto;
+  margin-bottom: 64px;
+  //margin-left: 84px;
   cursor: pointer;
 
   &:hover {
@@ -93,6 +146,12 @@
   &:focus {
     background-color: $accent-color;
     color: $primary-color;
+  }
+  @media screen and (min-width: 320px) {
+    //margin-top: 110px;
+  }
+
+  @media screen and (min-width: 480px) {
   }
 
   @media screen and (min-width: 768px) {
@@ -109,7 +168,12 @@
   width: 12px;
   height: 12px;
   fill: currentColor;
-  right: 35px;
+  //left: 69.08%;
+  //right: 23.03%;
+  //top: 35.71%;
+  //bottom: 35.71%;
+  right: 25px;
   top: 50%;
+
   transform: translateY(-50%);
 }
