@@ -1,5 +1,5 @@
 .hero {
-  padding-top: 99px;
+  padding-top: 50px;
 
   background-size: contain;
   background-position: bottom;
@@ -14,8 +14,9 @@
   }
 
   @media screen and (min-width: 768px) {
-    padding-top: 80px;
+    padding-top: 14px;
 
+    background-size: auto;
     background-image: url(../images/hero/dots_t@1x_768.png);
 
     @media (min-device-pixel-ratio: 2),
@@ -26,7 +27,7 @@
   }
 
   @media screen and (min-width: 1200px) {
-    padding-top: 118px;
+    padding-top: 45px;
 
     background-image: url(../images/hero/dots_d@1x_1200.png);
 
@@ -38,26 +39,38 @@
   }
 }
 
-// .container {
-//   display: block;
+.container {
+  position: relative;
+  display: block;
 
-//   padding-left: 20px;
-//   padding-right: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 236px;
 
-//   @media screen and (min-width: 768px) {
-//     display: flex;
-//     justify-content: space-between;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
 
-//     padding-left: 32px;
-//     padding-right: 32px;
-//   }
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 0;
+  }
 
-//   @media screen and (min-width: 1200px) {
-//     padding-left: 16px;
-//     padding-right: 16px;
-//   }
-// }
+  @media screen and (min-width: 1200px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
 
+.hero-wrap {
+  @media screen and (min-width: 768px) {
+    margin-bottom: 24px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 103px;
+  }
+}
 .hero-title {
   width: 247px;
   margin-bottom: 32px;
@@ -80,6 +93,10 @@
     }
   }
 
+  @media screen and (min-width: 768px) {
+    margin-bottom: 24px;
+  }
+
   @media screen and (min-width: 1200px) {
     width: 367px;
     margin-bottom: 28px;
@@ -95,8 +112,12 @@
   gap: 12px;
   margin-bottom: 12px;
 
+  @media screen and (min-width: 768px) {
+    margin-bottom: 39px;
+  }
+
   @media screen and (min-width: 1200px) {
-    margin-bottom: 42px;
+    margin-bottom: 111px;
   }
 }
 
@@ -169,11 +190,12 @@
     line-height: calc(17 / 14);
   }
 }
+.hero-info-content {
+  margin-left: 240px;
+}
 
 .hero-info {
   display: none;
-  align-items: center;
-  gap: 32px;
 
   &-text {
     margin-bottom: 12px;
@@ -194,13 +216,12 @@
   }
 
   @media screen and (min-width: 768px) {
-    display: flex;
-    margin-bottom: 12px;
+    display: block;
+    margin-left: 184px;
   }
 
   @media screen and (min-width: 1200px) {
-    gap: 16px;
-    margin-bottom: 67px;
+    margin-left: 240px;
   }
 }
 
@@ -250,5 +271,36 @@
       font-size: 14px;
       line-height: calc(17 / 14);
     }
+  }
+}
+
+.hero-picture-plate {
+  display: none;
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    display: block;
+
+    left: 32px;
+    bottom: 12px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    left: 16px;
+    bottom: 65px;
+  }
+}
+
+.hero-picture-ice {
+  position: absolute;
+  left: 28%;
+  bottom: 0;
+
+  @media screen and (min-width: 768px) {
+    left: 408px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    left: 652px;
   }
 }
