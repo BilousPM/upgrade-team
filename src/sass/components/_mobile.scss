@@ -6,6 +6,9 @@
   width: 100vw;
   height: 100vh;
   flex-direction: column;
+  padding-top: 12px;
+  padding-left: 32px;
+  padding-left: 17px;
 
   background-color: #85a279;
   z-index: 999;
@@ -19,37 +22,25 @@
   }
 }
 
-.menu-close {
-  min-height: 32px;
-  min-width: 32px;
-  display: -webkit-box;
-  display: -ms-flexbox;
+.menu-header {
   display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+  justify-content: space-between;
+}
 
-  margin-left: auto;
-  padding-top: 32px;
-  padding-bottom: 32px;
-
-  background-color: transparent;
-  color: #85a279;
-  cursor: pointer;
-  border: none;
-  border-radius: 50%;
-  outline: none;
-
+.logo {
   @media screen and (min-width: 768px) {
-    color: $bcg-color;
+    width: 48px;
+    height: 44px;
   }
 }
 
-.menu-close-item {
-  margin-top: 16px;
+.close-btn {
+  min-height: 32px;
+  min-width: 32px;
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
   margin-right: 20px;
 }
 
@@ -58,19 +49,13 @@
   flex-direction: column;
   gap: 32px;
 
-  //padding: 0;
-  //margin: 0;
-  //margin-bottom: auto;
+  margin-top: 51px;
+  margin-bottom: auto;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 76px;
+  }
 }
-
-/*.menu__list:nth-child(2) {
-  color: $secondary-color;
-}
-
-
-.link-item:nth-child(2) {
-  color: rgb(23 12 8);
-}*/
 
 .menu__link {
   font-weight: 700;
@@ -92,10 +77,6 @@
 .accent {
   color: $secondary-color;
 }
-
-/*.menu__link:nth-child(2) {
-  color: $secondary-color;
-}*/
 
 .menu__link-accent {
   font-weight: 700;
@@ -127,17 +108,12 @@
   font-size: 14px;
   line-height: calc(17 / 14);
 
-  //padding: 12px;
-  //padding-left: 36px;
-  //padding-right: 51px;
-
   color: $secondary-color;
   background-color: $interactive-color;
   border-radius: 10px;
   border-color: transparent;
   margin: auto;
   margin-bottom: 64px;
-  //margin-left: 84px;
   cursor: pointer;
 
   &:hover {
@@ -146,12 +122,6 @@
   &:focus {
     background-color: $accent-color;
     color: $primary-color;
-  }
-  @media screen and (min-width: 320px) {
-    //margin-top: 110px;
-  }
-
-  @media screen and (min-width: 480px) {
   }
 
   @media screen and (min-width: 768px) {
@@ -168,10 +138,6 @@
   width: 12px;
   height: 12px;
   fill: currentColor;
-  //left: 69.08%;
-  //right: 23.03%;
-  //top: 35.71%;
-  //bottom: 35.71%;
   right: 25px;
   top: 50%;
 
