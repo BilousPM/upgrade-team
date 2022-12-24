@@ -1,0 +1,265 @@
+.contacts__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 30px;
+}
+
+.contacts__info {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.contacts__block {
+  position: relative;
+
+  &:not(:last-child)::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: translateY(24px);
+
+    content: '';
+    display: block;
+    width: 216px;
+    height: 1px;
+
+    background-color: #e1e1e1;
+  }
+}
+
+.contacts__item {
+  padding: 40px 32px 24px 32px;
+
+  max-width: 280px;
+
+  background-color: #fcfcfc;
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
+}
+
+.contacts__hours {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contacts__connection {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contacts__text {
+  display: block;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.86;
+  letter-spacing: 0.04em;
+
+  color: $secondary-color;
+}
+
+.contact__category {
+  display: inline-block;
+
+  padding: 4px 22px;
+  margin-bottom: 20px;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 4px;
+
+  background-color: $interactive-color;
+  color: $secondary-color;
+}
+
+.contacts__address {
+  margin-top: 8px;
+
+  line-height: 1.83;
+
+  color: #d6936d;
+}
+
+.contacts__text--time {
+  margin-top: 0px;
+  color: #ababab;
+}
+
+.contacts__text--connect {
+  line-height: 1.6;
+}
+
+.contacts__btnList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.button {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
+  padding: 12px 40px;
+  min-width: 196px;
+  min-height: 42px;
+  background-color: $interactive-color;
+  color: $secondary-color;
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.29;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+
+  transition: background-color 250ms linear, color 250ms linear;
+
+  &:hover {
+    background-color: $accent-color;
+  }
+  &:focus {
+    background-color: $accent-color;
+    color: $primary-color;
+  }
+}
+
+.button__icon {
+  fill: currentColor;
+}
+
+.button--secondary {
+  box-sizing: border-box;
+
+  padding: 10px 55px;
+
+  border: 2px solid $interactive-color;
+
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts__list {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 40px;
+  }
+
+  .contacts__item {
+    padding: 44px 24px 40px 24px;
+
+    max-width: 224px;
+  }
+
+  .contacts__block {
+    position: relative;
+
+    &:not(:last-child)::after {
+      transform: translateY(32px);
+
+      width: 176px;
+    }
+  }
+
+  .contacts__info {
+    gap: 64px;
+  }
+
+  .contacts__connection {
+    gap: 4px;
+  }
+
+  .contacts__text {
+    font-size: 14px;
+  }
+
+  .contact__category {
+    margin-bottom: 32px;
+    padding: 4px 14px;
+
+    font-size: 16px;
+    line-height: 1.4;
+    border-radius: 6px;
+  }
+
+  .contacts__address {
+    margin-top: 12px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    .contacts__text--diff {
+      width: 159px;
+    }
+  }
+
+  .contacts__text--connect {
+    line-height: 1.5;
+  }
+
+  .contacts__btnList {
+    flex-direction: row;
+    gap: 20px;
+
+    justify-content: center;
+  }
+
+  .button {
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacts__list {
+    margin-bottom: 60px;
+  }
+
+  .contacts__item {
+    padding: 44px 40px 40px 40px;
+
+    max-width: 368px;
+  }
+
+  .contacts__block {
+    position: relative;
+
+    &:not(:last-child)::after {
+      width: 288px;
+    }
+  }
+
+  .contacts__text {
+    font-size: 16px;
+  }
+
+  .contact__category {
+    padding: 4px 14px;
+  }
+
+  .contacts__address {
+    margin-top: 8px;
+  }
+
+  .contacts__btnList {
+    gap: 16px;
+  }
+}
