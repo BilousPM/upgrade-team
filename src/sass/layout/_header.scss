@@ -2,6 +2,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 28px;
+        padding-bottom: 28px;
+    }
 }
 
 .header__logo {
@@ -26,72 +31,62 @@
 
 }
 
-.header__nav {
-   display: none;
+.menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    min-height: 32px;
+    min-width: 32px;
+    padding: 17px 0;
+    fill: #ffffff;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
 
-@media screen and (min-width: 1200px) {
-   display: flex; 
-   gap: 28px;}
-}
-
-.nav__link{
-    font-weight: 700;
-    font-size: 16px;
-    line-height: calc(20 / 16);
-    text-align: center;
-    padding-top: 32px;
-    padding-bottom: 13px;
-    color: $primary-color;
     cursor: url("../images/header/vector.png"), pointer;
-    &:hover {
-        color: $interactive-color;  
+
+    @media screen and (min-width: 768px) {
+           padding: 29px 0;
     }
 
-    &:focus {
-    color: $interactive-color;
+    @media screen and (min-width: 1200px) {
+        display: none;
     }
-
 }
 
 .header__button {
     display: none;
-@media screen and (min-width: 768px) {
-display:block
-}
     position: relative;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
     line-height: calc(17 / 14);
-    
-    padding: 12px;
-    padding-left: 36px;
-    padding-right: 51px;
+
+    padding: 12px 51px 12px 36px;
 
     color: $secondary-color;
     background-color: $interactive-color;
     border-radius: 10px;
     border-color: transparent;
-    margin-top: 4px;
-    margin-bottom: 0px;
-    margin-left: 0;
-    margin-right: 0;
+
     cursor: url("../images/header/vector.png"), pointer;
-    @media screen and (min-width: 1200px) {
-    margin-top: 20px;
-    margin-left: auto;
-    margin-bottom: 3px;
-    } 
+
+    @media screen and (min-width: 768px) {
+            display: block
+        }
 
     &:hover {
         background-color: $accent-color;
     }
+
     &:focus {
         background-color: $accent-color;
         color: $primary-color;
     }
-    
 }
+
 .arrow {
     position: absolute;
     width: 12px;
@@ -100,34 +95,34 @@ display:block
     right: 35px;
     top: 50%;
     transform: translateY(-50%);
-
-    }
- 
-.menu-toggle {
-   display: flex;
-   align-items: center;
-   justify-content: center;
-
-   min-height: 32px;
-   min-width: 32px;
-   padding-top: 17px;
-   padding-bottom: 17px;
-   fill: #ffffff;
-   background-color: transparent;
-   cursor: pointer;
-   border: none;
-   outline: none;
 }
 
-@media (min-width: 1200px) {
-   .menu-toggle {
+.header__nav {
    display: none;
-  }
+
+    @media screen and (min-width: 1200px) {
+           display: flex;
+           gap: 28px;
+        }
 }
 
-// .btn__wrap {
-//     display: flex;
-//     justify-content: center;
-//     gap: 32px;
-//     align-items: center;
-// }
+.nav__link{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: calc(20 / 16);
+    text-align: center;
+    color: $primary-color;
+
+    cursor: url("../images/header/vector.png"), pointer;
+
+    &:hover, &:focus {
+        color: $interactive-color;  
+    }
+}
+
+.btn__wrap {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    align-items: center;
+}

@@ -14,13 +14,13 @@ $breakpoints: (
     // mobile screen
     @media screen and (min-width: 480px) {
         width: 480px;
-        padding-right: 32px;
-        padding-left: 32px;
     }
 
     // tablet screen
     @media screen and (min-width: 768px) {
         width: 768px;
+        padding-right: 32px;
+        padding-left: 32px;
     }
 
     // desktop screen

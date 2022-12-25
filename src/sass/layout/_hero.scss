@@ -1,5 +1,8 @@
+
 .hero {
-  padding-top: 50px;
+  position: relative;
+  padding-top: 33px;
+  padding-bottom: 237px;
 
   background-size: contain;
   background-position: bottom;
@@ -39,38 +42,6 @@
   }
 }
 
-.container {
-  position: relative;
-  display: block;
-
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 236px;
-
-  @media screen and (min-width: 768px) {
-    display: flex;
-    justify-content: space-between;
-
-    padding-left: 32px;
-    padding-right: 32px;
-    padding-bottom: 0;
-  }
-
-  @media screen and (min-width: 1200px) {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-}
-
-.hero-wrap {
-  @media screen and (min-width: 768px) {
-    margin-bottom: 24px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    margin-bottom: 103px;
-  }
-}
 .hero-title {
   width: 247px;
   margin-bottom: 32px;
@@ -107,30 +78,31 @@
 }
 
 .hero-nav {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    
+    // margin-bottom: 12px;
 
-  @media screen and (min-width: 768px) {
-    margin-bottom: 39px;
-  }
+    @media screen and (min-width: 768px) {
+      margin-bottom: 39px;
+    }
 
-  @media screen and (min-width: 1200px) {
-    margin-bottom: 111px;
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 111px;
+    }
   }
-}
 
 .hero-nav-button {
-  display: flex;
-  align-items: center;
-  text-align: center;
+  // display: flex;
+  // align-items: center;
+  // text-align: center;
 
   border: 2px solid #f8d24e;
   border-radius: 8px;
   padding: 11px 26px;
-  cursor: pointer;
-
+  cursor: url("../images/header/vector.png"), pointer;
+  
   font-weight: 600;
   font-size: 12px;
   line-height: calc(15 / 12);
@@ -145,10 +117,10 @@
     color: #fcfcfc;
     border: 2px solid #0a8817;
   }
-  &:disabled {
-    color: #131313;
-    border: 2px solid #ababab;
-  }
+  // &:disabled {
+  //   color: #131313;
+  //   border: 2px solid #ababab;
+  // }
 
   @media screen and (min-width: 1200px) {
     padding: 12px 34px;
@@ -160,12 +132,12 @@
 }
 
 .hero-nav-btn {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  padding: 12px 21px 11px 22px;
+  // display: flex;
+  // align-items: center;
+  // text-align: center;
+  // padding: 12px 21px 11px 22px;
   border: none;
-  cursor: pointer;
+  cursor: url("../images/header/vector.png"), pointer;
 
   font-weight: 600;
   font-size: 12px;
@@ -178,21 +150,24 @@
   &:hover {
     color: #0a8817;
   }
+
   &:focus {
     color: #fcfcfc;
   }
-  &:disabled {
-    color: #ababab;
-  }
+
+  // &:disabled {
+  //   color: #ababab;
+  // }
 
   @media screen and (min-width: 1200px) {
     font-size: 14px;
     line-height: calc(17 / 14);
   }
 }
-.hero-info-content {
-  margin-left: 240px;
-}
+
+// .hero-info-content {
+//   margin-left: 240px;
+// }
 
 .hero-info {
   display: none;
@@ -226,6 +201,8 @@
 }
 
 .hero-advant {
+  display: none;
+
   display: flex;
   justify-content: center;
   gap: 14px;
@@ -304,3 +281,38 @@
     left: 652px;
   }
 }
+
+
+
+// .container {
+//   position: relative;
+//   display: block;
+
+//   // padding-left: 20px;
+//   // padding-right: 20px;
+//   padding-bottom: 236px;
+
+//   @media screen and (min-width: 768px) {
+//     display: flex;
+//     justify-content: space-between;
+
+//     padding-left: 32px;
+//     padding-right: 32px;
+//     padding-bottom: 0;
+//   }
+
+//   @media screen and (min-width: 1200px) {
+//     padding-left: 16px;
+//     padding-right: 16px;
+//   }
+// }
+
+// .hero-wrap {
+//   @media screen and (min-width: 768px) {
+//     margin-bottom: 24px;
+//   }
+
+//   @media screen and (min-width: 1200px) {
+//     margin-bottom: 103px;
+//   }
+// }
