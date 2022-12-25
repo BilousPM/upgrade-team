@@ -47,9 +47,9 @@
     padding: 28px;
     margin: auto;
          
-    // opacity: 1;
+    opacity: 1;
     visibility: hidden;
-    opacity: 0;
+    // opacity: 0;
     transition: transform var(--animation), opacity var(--animation);
   
     @media screen and (min-width: 480px) {
