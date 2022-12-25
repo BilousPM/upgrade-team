@@ -1,0 +1,42 @@
+.reviews {
+
+&-box {
+  padding-top: 140px;
+  display: flex;
+  justify-content: center;
+}
+
+&__img {
+  display: flex;
+  justify-content: center;
+}
+
+&__img > img {
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+&__text {
+  display: inline-table;
+  width: 957px;
+  height: 54px;
+  text-align: center;
+  letter-spacing: 0.04em;
+
+  color: #fcfcfc;
+  font-size: 16px;
+  line-height: 186%;
+  background-color: #84A178;
+  border-radius: 24px;
+  padding: 39px 73px;
+}
+
+&__name {
+  margin-top: 32px;
+  font-size: 16px;
+  line-height: 186%;
+  text-align: center;
+
+  color: #131313;
+}
+}
