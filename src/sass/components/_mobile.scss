@@ -1,17 +1,28 @@
 .menu__container {
-  display: flex;
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  flex-direction: column;
-  padding-top: 12px;
-  padding-left: 32px;
-  padding-left: 17px;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    gap: 32px;
+    background-color: #85a279;
+    transform: translateX(100%);
+    z-index: 999;
 
-  background-color: #85a279;
-  z-index: 999;
+
+  // display: flex;
+  // position: fixed;
+  // top: 0;
+  // left: 0;
+  // width: 100vw;
+  // height: 100vh;
+  // flex-direction: column;
+  // padding-top: 12px;
+  // padding-left: 32px;
+  // padding-left: 17px;
+
+  // background-color: #85a279;
+  // z-index: 999;
 
   @media screen and (min-width: 768px) {
     background-color: #97af8d;

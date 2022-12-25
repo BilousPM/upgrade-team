@@ -10,15 +10,16 @@
 
     <div class="btn__wrap">
       <button
-        class="menu-toggle js-open-menu"
+        class="menu-toggle js-open-modal"
+        data-modal="2"
         aria-expanded="false"
         aria-controls="mobile-menu"
       >
-        <svg class="burger__btn" width="32" height="32">
+        <svg class="burger__btn js-open-modal" width="32" height="32">
           <use href="./images/svg/symbol-defs.svg#icon-eva_menu-fill"></use>
         </svg>
       </button>
-      <button type="button" class="header__button">
+      <button type="button" class="header__button js-open-modal" data-modal="1">
         Buy now<svg class="arrow" wight="6" height="10">
           <use href="./images/header/svg/arrow.svg#Vector"></use>
         </svg>
