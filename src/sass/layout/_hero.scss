@@ -18,7 +18,8 @@
 
   @media screen and (min-width: 768px) {
     padding-top: 14px;
-
+    padding-bottom: 0;
+    
     background-size: auto;
     background-image: url(../images/hero/dots_t@1x_768.png);
 
@@ -40,6 +41,34 @@
       background-image: url(../images/hero/dots_d@2x_2400.png);
     }
   }
+}
+
+.hero__container {
+  
+      @media screen and (min-width: 768px) {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+  
+        // padding-left: 32px;
+        // padding-right: 32px;
+        // padding-bottom: 0;
+      }
+  
+      @media screen and (min-width: 1200px) {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+    }
+  
+    .hero-wrap {
+      @media screen and (min-width: 768px) {
+        margin-bottom: 17px;
+      }
+  
+      @media screen and (min-width: 1200px) {
+        margin-bottom: 103px;
+      }
 }
 
 .hero-title {
@@ -176,8 +205,6 @@
     margin-bottom: 12px;
     width: 139px;
 
-    font-style: normal;
-    font-weight: 400;
     font-size: 12px;
     line-height: calc(17 / 12);
 
@@ -284,35 +311,3 @@
 
 
 
-// .container {
-//   position: relative;
-//   display: block;
-
-//   // padding-left: 20px;
-//   // padding-right: 20px;
-//   padding-bottom: 236px;
-
-//   @media screen and (min-width: 768px) {
-//     display: flex;
-//     justify-content: space-between;
-
-//     padding-left: 32px;
-//     padding-right: 32px;
-//     padding-bottom: 0;
-//   }
-
-//   @media screen and (min-width: 1200px) {
-//     padding-left: 16px;
-//     padding-right: 16px;
-//   }
-// }
-
-// .hero-wrap {
-//   @media screen and (min-width: 768px) {
-//     margin-bottom: 24px;
-//   }
-
-//   @media screen and (min-width: 1200px) {
-//     margin-bottom: 103px;
-//   }
-// }

@@ -11,6 +11,8 @@ $breakpoints: (
     margin-right: auto;
     margin-left: auto;
 
+// outline: 2px solid red;
+
     // mobile screen
     @media screen and (min-width: 480px) {
         width: 480px;
@@ -26,5 +28,6 @@ $breakpoints: (
     // desktop screen
     @media screen and (min-width: 1200px) {
         width: 1200px;
+        padding: 0 16px;
     }
 }
