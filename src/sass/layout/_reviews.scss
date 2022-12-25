@@ -27,18 +27,25 @@
     }
 
     &__text {
-      // display: inline-table;
-      // width: 90%;
+      display: inline-table;
       padding: 35px 39px;
       margin-bottom: 32px;
-      // height: 54px;
-      // text-align: center;
+      text-align: center;
       color: #fcfcfc;
       font-size: 12px;
       line-height: calc(31/12) ;
       letter-spacing: 0.04em;
       background-color: #84A178;
       border-radius: 24px;
+
+      @media screen and (min-width: 1200px) {
+        width: 968px;
+        padding: 43px 109px;
+        
+          font-weight: 500;
+          font-size: 16px;
+          line-height: calc(30/16);
+      }
     }
 
     &__name {
