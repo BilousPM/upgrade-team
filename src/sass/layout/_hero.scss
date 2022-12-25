@@ -1,4 +1,3 @@
-
 .hero {
   position: relative;
   padding-top: 33px;
@@ -19,7 +18,7 @@
   @media screen and (min-width: 768px) {
     padding-top: 14px;
     padding-bottom: 0;
-    
+
     background-size: auto;
     background-image: url(../images/hero/dots_t@1x_768.png);
 
@@ -44,31 +43,30 @@
 }
 
 .hero__container {
-  
-      @media screen and (min-width: 768px) {
-        position: relative;
-        display: flex;
-        justify-content: space-between;
-  
-        // padding-left: 32px;
-        // padding-right: 32px;
-        // padding-bottom: 0;
-      }
-  
-      @media screen and (min-width: 1200px) {
-        padding-left: 16px;
-        padding-right: 16px;
-      }
-    }
-  
-    .hero-wrap {
-      @media screen and (min-width: 768px) {
-        margin-bottom: 17px;
-      }
-  
-      @media screen and (min-width: 1200px) {
-        margin-bottom: 103px;
-      }
+  @media screen and (min-width: 768px) {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    // padding-left: 32px;
+    // padding-right: 32px;
+    // padding-bottom: 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.hero-wrap {
+  @media screen and (min-width: 768px) {
+    margin-bottom: 17px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 103px;
+  }
 }
 
 .hero-title {
@@ -107,20 +105,20 @@
 }
 
 .hero-nav {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    
-    // margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 
-    @media screen and (min-width: 768px) {
-      margin-bottom: 39px;
-    }
+  // margin-bottom: 12px;
 
-    @media screen and (min-width: 1200px) {
-      margin-bottom: 111px;
-    }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 39px;
   }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 111px;
+  }
+}
 
 .hero-nav-button {
   // display: flex;
@@ -130,8 +128,8 @@
   border: 2px solid #f8d24e;
   border-radius: 8px;
   padding: 11px 26px;
-  cursor: url("../images/header/vector.png"), pointer;
-  
+  cursor: url('../images/header/vector.png'), pointer;
+
   font-weight: 600;
   font-size: 12px;
   line-height: calc(15 / 12);
@@ -166,7 +164,7 @@
   // text-align: center;
   // padding: 12px 21px 11px 22px;
   border: none;
-  cursor: url("../images/header/vector.png"), pointer;
+  cursor: url('../images/header/vector.png'), pointer;
 
   font-weight: 600;
   font-size: 12px;
@@ -194,10 +192,6 @@
   }
 }
 
-// .hero-info-content {
-//   margin-left: 240px;
-// }
-
 .hero-info {
   display: none;
 
@@ -209,12 +203,16 @@
     line-height: calc(17 / 12);
 
     @media screen and (min-width: 1200px) {
-      width: 200px;
+      width: 201px;
       margin-bottom: 24px;
 
       font-size: 14px;
       line-height: calc(20 / 14);
     }
+  }
+
+  &-icon {
+    fill: currentColor;
   }
 
   @media screen and (min-width: 768px) {
@@ -308,6 +306,3 @@
     left: 652px;
   }
 }
-
-
-
