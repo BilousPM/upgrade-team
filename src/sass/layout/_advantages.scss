@@ -1,7 +1,7 @@
 .advantages {
   padding-top: 50px;
   padding-bottom: 64px;
-  position: relative;
+  
 
   @media screen and(min-width: 768px) {
     padding-top: 86px;
@@ -13,6 +13,7 @@
     padding-bottom: 178px;
   }
 }
+
 .advantages__list {
   display: flex;
   flex-direction: column;
@@ -27,7 +28,7 @@
   @media screen and(min-width: 1200px) {
     gap: 32px;
   }
-  position: relative;
+   position: relative;
 }
 
 .advantages__item {
