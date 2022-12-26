@@ -2,26 +2,14 @@
 
 .footer {
   &-upper-container {
-    // padding: 0 20px 40px;
-    // --------------------------------
-    padding-top: 1095px;
-    padding-bottom: 40px;
-    // --------------------------------
+    padding: 0 20px 40px;
 
     @include only-tablet {
-      // padding: 0 32px 32px 33px;
-      // --------------------------------
-      padding-top: 368px;
-      padding-bottom: 33px;
-      // -------------------------------
+      padding: 0 32px 32px 33px;
     }
 
     @include only-desktop {
-      // padding: 60px 16px;
-      // --------------------------------
-      padding-top: 638px;
-      padding-bottom: 60px;
-      // -------------------------------
+      padding: 60px 16px;
     }
 
     @include tablet-and-desktop {

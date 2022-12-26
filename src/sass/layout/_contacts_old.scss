@@ -1,26 +1,8 @@
-// додано ------------------------------------------
-
-.contacts {
-  position: relative;
-}
-
-.contacts__wrapper {
+  .contacts__list {
   position: absolute;
-  top: -353px;
+  // top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-
-  @media screen and (min-width: 768px) {
-    top: -299px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    top: -128px;
-  }
-}
-// кінець поточних змін --------------------------------
-
-.contacts__list {
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -28,6 +10,10 @@
   justify-content: center;
 
   margin-bottom: 30px;
+}
+
+.contacts{
+  position: relative;
 }
 
 .contacts__info {
@@ -47,12 +33,9 @@
 
     content: '';
     display: block;
-
-    // змінена ширина сірої полоски на 100%, -----------------
-    // далі для медіа також ----------------------------------
-    // width: 216px;
-    width: 100%;
+    width: 216px;
     height: 1px;
+
     background-color: #e1e1e1;
   }
 }
@@ -60,22 +43,11 @@
 .contacts__item {
   padding: 40px 32px 24px 32px;
 
+  max-width: 280px;
+
   background-color: #fcfcfc;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
-
-  // зміни ---------------------------------------------------
-  width: 280px;
-  max-height: 412px;
-
-  @media screen and(min-width: 768px) {
-    max-height: 537px;
-  }
-
-  @media screen and(min-width: 1200px) {
-    max-height: 542px;
-  }
-  // кінець поточних змін --------------------------------------
 }
 
 .contacts__hours {
@@ -202,8 +174,8 @@
   }
 
   .contacts__item {
-    // змінено підінги згідно макету ---------------------------------
-    padding: 40px 32px 24px 32px;
+    padding: 44px 24px 40px 24px;
+
     max-width: 224px;
   }
 
@@ -213,7 +185,7 @@
     &:not(:last-child)::after {
       transform: translateY(32px);
 
-      // width: 176px;
+      width: 176px;
     }
   }
 
@@ -270,22 +242,18 @@
   }
 
   .contacts__item {
-    // змінено пвдінги згідно макету ---------------------------
-    padding: 40px;
+    padding: 44px 40px 40px 40px;
 
     max-width: 368px;
-
-    // додано колір. Хоча можливо це помилка на макеті -------------
-    background-color: #ffffff;
   }
 
-  // .contacts__block {
-  //   position: relative;
+  .contacts__block {
+    position: relative;
 
-  //   &:not(:last-child)::after {
-  //     width: 288px;
-  //   }
-  // }
+    &:not(:last-child)::after {
+      width: 288px;
+    }
+  }
 
   .contacts__text {
     font-size: 16px;
