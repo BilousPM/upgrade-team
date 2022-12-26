@@ -28,7 +28,9 @@
 
   // Desktop
 
-  @media screen and (max-width: 1200px) {
+    @media screen and (min-width: 1200px){
+
+  // @media screen and (max-width: 1200px) 
     background-image: url(../images/products/bg_desk@1x-min.png);
 
     @media (min-device-pixel-ratio: 2),

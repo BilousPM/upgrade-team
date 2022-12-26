@@ -3,12 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- cdn swiper -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>IceCream</title>
 
     <!-- favicon -->
     <link
@@ -45,6 +41,18 @@
       rel="stylesheet"
     />
 
+    <!-- animatet imag -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- cdn swiper -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
     <!-- slick -->
     <!-- Add the slick-theme.css if you want default styling -->
     <link
@@ -63,17 +71,12 @@
     <!-- base style -->
     <link rel="stylesheet" href="./sass/index.scss" />
 
-    <!-- animatet imag -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
-
     <!-- base js -->
     <script type="module" src="./index.js"></script>
-    <script type="module" src="./js/slick.js"></script>
-    <script type="module" src="./js/modal.js"></script>
+    <!-- <script type="module" src="./js/slick.js"></script> -->
+    <!-- <script type="module" src="./js/modal.js"></script> -->
   </head>
+
   <body>
     <!-- Юрій Дегтяренко -->
     <include src="./partials/header.html"></include>
@@ -88,7 +91,7 @@
       <!-- Ольга Криушичева -->
       <include src="./partials/advantages.html"></include>
       <!-- Vladimir Minakov -->
-      <include src="./partials/gallery.html"></include>
+      <!-- <include src="./partials/gallery.html"></include> -->
       <!-- Дмитро -->
       <include src="./partials/reviews.html"></include>
       <!-- Khelen Ukandu -->
@@ -98,7 +101,7 @@
     <!-- Vitalii Prokopenko -->
     <include src="./partials/footer.html"></include>
     <!-- Milonushkina Ekateryna -->
-    <include src="./partials/modal.html"></include>
+    <!-- <include src="./partials/modal.html"></include> -->
     <!-- Анна Атилган -->
     <include src="./partials/mobile.html"></include>
 
@@ -119,9 +122,18 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
+    <!-- mobile -->
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+
     <!-- base js -->
-    <script src="./js/swiper.js"></script>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/slick.js"></script>
-    <script src="./js/modal.js"></script>
+    <!-- <script src="./js/modal.js"></script>/ -->
+    <!-- <script type="module" src="./js/modal.js"></scri> -->
   </body>
 </html>

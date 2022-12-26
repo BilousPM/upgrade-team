@@ -9,26 +9,28 @@
  
    @include for-size (phone) {
     top: -32px;
-}
-@include for-size (tablet) {
-    top: -114px;
-}
-@include for-size (desktop) {
-   top: -98px;
-}
-} 
+    }
 
+    @include for-size (tablet) {
+        top: -114px;
+    }
+
+    @include for-size (desktop) {
+        top: -98px;
+    }
+} 
 
 .slide{
     margin: 0 auto;
+
     @include for-size (phone) {
-        display: block;
+       display: block;
        width:  280px;
        height: auto;
        border-radius: 8px;
        
        margin-left: 20px;
-        margin-right: 20px;
+       margin-right: 20px;
     }
     
     @include for-size (tablet) {

@@ -17,6 +17,7 @@
 
 // .backdrop {
 //     position: fixed;
+//     z-index: 1000;
 //     top: 0;
 //     left: 0;
 //     width: 100%;
@@ -32,58 +33,93 @@
 //       opacity: 0;
 //       pointer-events: none;
 //       }
-   
+//   }
+.modal.active,
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+.modal {
+
+  /* Скрываем окна  */
+  opacity: 0;
+  visibility: hidden;
+
+
+  /*  Установаем ширину окна  */
+  width: 100%;
+  max-width: 500px;
+
+  /*  Центрируем и задаем z-index */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 30;
+  /* Должен быть выше чем у подложки*/
+
+  /*  Побочные стили   */
+  box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2);
+  text-align: center;
+  padding: 30px;
+  border-radius: 3px;
+  background-color: #fff;
+  transition: 0.3s all;
+}
    
   
   // BUY IT
 
-  .modal-buy-now {
-    position: relative;
-    width: 100%;
-    max-width: 280px;
-    background-color: $primary-color;
-    border: 2px solid $interactive-color;
-    border-radius: 10px;
-    padding: 28px;
-    margin: auto;
+  // .modal{
+  //   z-index: 30;
+  //   position: fixed;
+  //   top: 50%;
+  //       left: 50%;
+  //       transform: translate(-50%, -50%) scale(1);
+  //   width: 100%;
+  //   max-width: 280px;
+  //   background-color: $primary-color;
+  //   border: 2px solid $interactive-color;
+  //   border-radius: 10px;
+  //   padding: 28px;
+  //   margin: auto;
          
-    opacity: 1;
-    visibility: hidden;
-    // opacity: 0;
-    transition: transform var(--animation), opacity var(--animation);
+  //   opacity: 0;
+  //   visibility: hidden;
+  //   transition: transform var(--animation), opacity var(--animation);
   
-    @media screen and (min-width: 480px) {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%) scale(1);
+  //   // @media screen and (min-width: 480px) {
+  //   //   position: absolute;
+  //   //   top: 50%;
+  //   //   left: 50%;
+  //   //   transform: translate(-50%, -50%) scale(1);
                   
-    }
+  //   // }
   
-    @media screen and (min-width: 768px) {
-      max-width: 568px;
-      padding: 32px 54px;
-    }
+  //   @media screen and (min-width: 768px) {
+  //     max-width: 568px;
+  //     padding: 32px 54px;
+  //   }
 
-    &-lable {
-      display: block;
-      font-family: 'Seymour One';
-      font-style: normal;
-      font-weight: 400;
-      font-size: 16px;
-      line-height: calc(24/16);
-      color: $secondary-color;
-      text-align: center;
-      margin-bottom: 20px;
+  //   &-lable {
+  //     display: block;
+  //     font-family: 'Seymour One';
+  //     font-style: normal;
+  //     font-weight: 400;
+  //     font-size: 16px;
+  //     line-height: calc(24/16);
+  //     color: $secondary-color;
+  //     text-align: center;
+  //     margin-bottom: 20px;
   
-      @media screen and (min-width: 768px) {
-        font-size: 20px;
-        line-height: calc(28/20);
-        margin-bottom: 32px;
-      }
+  //     @media screen and (min-width: 768px) {
+  //       font-size: 20px;
+  //       line-height: calc(28/20);
+  //       margin-bottom: 32px;
+  //     }
        
-    }    
-  }
+  //   }    
+  // }
 
   .modal-buy-now-lable {
     margin-bottom: 0;

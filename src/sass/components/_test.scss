@@ -1,0 +1,553 @@
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+
+    overflow-y: scroll;
+
+    opacity: 1;
+    transition: opacity var(--animation), visibility var(--animation);
+
+    &.is-hidden {
+        opacity: 0;
+        pointer-events: none;
+    }
+
+}
+
+// BUY IT
+
+.modal {
+    position: relative;
+    width: 100%;
+    max-width: 280px;
+    background-color: $primary-color;
+    border: 2px solid $interactive-color;
+    border-radius: 10px;
+    padding: 28px;
+    margin: auto;
+
+    opacity: 1;
+    transition: transform var(--animation), opacity var(--animation);
+
+    @media screen and (min-width: 480px) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+
+    }
+
+    @media screen and (min-width: 768px) {
+        max-width: 568px;
+        padding: 32px 54px;
+    }
+
+    &-lable {
+        display: block;
+        font-family: 'Seymour One';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: calc(24/16);
+        color: $secondary-color;
+        text-align: center;
+        margin-bottom: 20px;
+
+        @media screen and (min-width: 768px) {
+            font-size: 20px;
+            line-height: calc(28/20);
+            margin-bottom: 32px;
+        }
+
+    }
+}
+
+.modal-buy-now-lable {
+    margin-bottom: 0;
+}
+
+.backdrop.is-hidden .modal {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.modal-form-lable {
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.modal-form-lable:last-child {
+    margin-bottom: 0px;
+}
+
+.modal-form-field {
+    width: 100%;
+    height: 32px;
+    background: rgba(248, 210, 78, 0.1);
+    border: 1px solid $bcg-color;
+    border-radius: 10px;
+    padding: 8px 12px;
+
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+    transition: outline 250ms linear;
+
+    &::placeholder {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 140%;
+        color: $secondary-color;
+    }
+
+    &:focus {
+        outline-color: $accent-color;
+    }
+
+    @media screen and (min-width: 768px) {
+        height: 42px;
+        padding: 11px 16px;
+
+        .modal-form-field::placeholder {
+            font-size: 14px;
+        }
+    }
+
+    &:not(:placeholder-shown):required:invalid {
+        border-color: red;
+    }
+}
+
+.modal-form-message {
+    display: block;
+    width: 100%;
+    height: 65px;
+    resize: none;
+    background: rgba(248, 210, 78, 0.1);
+    border: 1px solid $bcg-color;
+    border-radius: 10px;
+    padding: 11px 16px;
+
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+    transition: outline 250ms linear;
+
+    &::placeholder {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 140%;
+        color: $secondary-color;
+    }
+
+    &:focus {
+        outline-color: $accent-color;
+    }
+
+    @media screen and (min-width: 768px) {
+        height: 84px;
+
+        .modal-form-message::placeholder {
+            font-size: 14px;
+        }
+    }
+}
+
+.modal-form-group {
+    margin-bottom: 24px;
+    justify-content: center;
+
+    @media screen and (min-width:768px) {
+        margin-bottom: 32px;
+        padding-left: 60px;
+        padding-right: 60px;
+
+    }
+}
+
+.modal-form-btn {
+    display: block;
+    margin: auto;
+    align-items: center;
+    padding: 12px 34px;
+    min-width: 114px;
+    min-height: 42px;
+    background-color: $interactive-color;
+    color: $secondary-color;
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: calc(15/12);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+
+
+    transition: background-color 250ms linear, color 250ms linear;
+
+    &:hover {
+        background-color: $accent-color;
+    }
+
+    &:focus {
+        background-color: $accent-color;
+        color: $primary-color;
+
+    }
+
+    @media screen and (min-width: 768px) {
+        min-width: 121px;
+        font-size: 14px;
+        line-height: calc(17/14);
+    }
+}
+
+.buy-now-btn {
+    font-size: 14px;
+    line-height: calc(17/14);
+
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    color: $secondary-color;
+    padding: 0;
+    cursor: pointer;
+
+    &-icon {
+        fill: currentColor;
+        width: 20px;
+        height: 20px;
+
+        @media screen and (min-width: 768px) {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+
+
+.modal-form-chekbox {
+    appearance: none;
+    border-radius: 15px;
+    width: 136px;
+    height: 138px;
+
+    outline: 2px solid transparent;
+    outline-offset: -2px;
+    transition: outline-color 250ms linear;
+
+
+}
+
+.modal-productsitem .modal-form-chekbox:checked {
+    outline-color: $accent-color;
+    box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
+}
+
+.product-categories {
+    margin-top: 84px;
+    margin-bottom: 32px;
+
+    @media screen and (min-width:768px) {
+        margin-top: 103px;
+        margin-bottom: 40px;
+    }
+}
+
+.modal-productsitem {
+    gap: 32px;
+
+    &:not(:last-child) {
+        margin-bottom: 84px;
+
+        @media screen and (min-width:768px) {
+            margin-bottom: 0;
+
+        }
+    }
+}
+
+.modal-productspictures {
+    width: 132px;
+    height: 139px;
+    transform: translate(0%, -45%);
+}
+
+.product-categories .productspicture--green-section::after,
+.product-categories .productspicture--orange-section::after,
+.product-categories .productspicture--terracotta-section::after {
+    width: 132px;
+    height: 132px;
+}
+
+.modal-productswrap {
+    position: absolute;
+    top: 0;
+    left: auto;
+    height: 136px;
+    width: 132px;
+    border-radius: 15px;
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+
+        @media screen and (min-width: 768px) {
+            margin-bottom: 32px;
+        }
+    }
+}
+
+.modal-productswrap--green-section {
+    background: transparent;
+    border: 2px solid #96AF8C;
+    box-shadow: (0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+    border-radius: 15px;
+}
+
+.modal-productswrap--terracotta-section {
+    background: transparent;
+    border: 2px solid #D6936D;
+    box-shadow: (0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+    border-radius: 15px;
+}
+
+.modal-productssubtitle {
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $secondary-color;
+    font-size: 16px;
+    line-height: calc(20/16);
+    padding-top: 88px;
+    text-align: center;
+}
+
+// HOW IT'S MADE?
+
+.modal-text {
+    max-width: 224px;
+    font-weight: 400;
+    line-height: 140%;
+    color: $secondary-color;
+    margin: auto;
+
+    @media screen and (min-width: 768px) {
+        max-width: 448px;
+    }
+
+}
+
+
+.video {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+.modal-video {
+    max-width: 224px;
+    background-color: $secondary-color;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+
+
+    @media screen and (min-width: 768px) {
+        max-width: 448px;
+        height: 205px;
+        margin-bottom: 32px;
+    }
+}
+
+// OUR LOCATION
+
+.modal-map {
+    display: block;
+    margin: auto;
+    width: 224px;
+    border-radius: 10px;
+    margin-bottom: 24px;
+
+    @media screen and (min-width: 768px) {
+        width: 448px;
+        margin-bottom: 32px;
+
+    }
+}
+
+.location-btn {
+    width: 134px;
+
+    @media screen and (min-width: 768px) {
+        width: 145px;
+    }
+}
+
+
+//  Franchise modal
+
+.franchise-text {
+    margin-bottom: 24px;
+
+    @media screen and (min-width: 768px) {
+        margin-bottom: 32px;
+    }
+
+}
+
+.franchise-lable {
+    margin-bottom: 24px;
+
+    @media screen and (min-width: 768px) {
+        width: 322px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+// Modal ingredients
+
+.ingredients-modal {
+    padding: 28px 20px;
+
+    @media screen and (min-width: 768px) {
+        padding: 32px 40px;
+    }
+}
+
+.image-wrapper {
+    position: relative;
+    width: 132px;
+    height: 132px;
+    background-color: #9CBE8F;
+    border-radius: 50%;
+    display: flex;
+    margin-bottom: 22px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.ingredients-image {
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: -7px;
+    left: 0;
+
+}
+
+.proportion {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: center;
+
+
+    &-list {
+        display: flex;
+        gap: 9px;
+    }
+
+    &-item {
+        position: relative;
+    }
+}
+
+.weight {
+    font-weight: 500;
+    font-size: 10px;
+    line-height: calc(28/10);
+    color: $secondary-color;
+    width: 43px;
+    height: 43px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: #9CBE8F;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 5px;
+}
+
+.include {
+    font-weight: 400;
+    font-size: 10px;
+    line-height: calc(12/10);
+    width: 53px;
+    height: 72px;
+    color: $secondary-color;
+    border: 2px solid #9CBE8F;
+    border-radius: 40px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 8px;
+}
+
+
+.ingredients {
+    margin-bottom: 40px;
+
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-weight-list {
+        text-align: end;
+    }
+
+    &-lable {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: calc(28/20);
+        display: block;
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+
+    &-name {
+        font-weight: 400;
+        line-height: 176%;
+        color: $secondary-color;
+
+        &:not(:last-child) {
+            margin-bottom: 11px;
+        }
+    }
+
+    &-weight {
+        font-weight: 400;
+        line-height: 176%;
+        color: $secondary-color;
+
+        &:not(:last-child) {
+            margin-bottom: 11px;
+        }
+
+    }
+
+    &-btn {
+        min-width: 132px;
+        font-family: inherit;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: calc(17/14);
+    }
+}
