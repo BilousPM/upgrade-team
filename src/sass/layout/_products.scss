@@ -113,7 +113,7 @@
     justify-content: center;
 
     @media screen and (min-width: 768px) {
-      width: 30%;
+      width: calc(100%/3) ;
     }
   }
 

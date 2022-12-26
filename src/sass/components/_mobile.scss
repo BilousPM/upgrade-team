@@ -1,15 +1,30 @@
 .menu__container {
+  // position: fixed;
+  //   top: 0;
+  //   left: 0;
+  //   height: 100%;
+  //   width: 100%;
+  //   gap: 32px;
+  //   background-color: #85a279;
+  //   transform: translateX(100%);
+  //   z-index: 999;
+
+
   display: flex;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  // width: 100vw;
+  // height: 100vh;
+     width: 100%;
+     height: 100%;
+
   flex-direction: column;
   padding-top: 12px;
   padding-left: 32px;
   padding-left: 17px;
-
+      transform: translateX(100%);
+      transition: transform $animations-buttons;
   background-color: #85a279;
   z-index: 999;
 
@@ -17,9 +32,9 @@
     background-color: #97af8d;
   }
 
-  @media screen and (min-width: 1200px) {
-    display: none;
-  }
+  // @media screen and (min-width: 1200px) {
+  //   display: none;
+  // }
 }
 
 .menu-header {
