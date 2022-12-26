@@ -1,10 +1,7 @@
-.gallery{
-
-}
-
 .ice-swiper {
     position: relative;
 }
+
 .swiper-container {
     position: absolute;
     z-index: 777;
@@ -20,7 +17,6 @@
    top: -98px;
  
     }
-} 
 
     @include for-size (tablet) {
         top: -114px;
@@ -29,7 +25,7 @@
     @include for-size (desktop) {
         top: -98px;
     }
-} 
+}
 
 .slide{
     
