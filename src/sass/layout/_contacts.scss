@@ -8,6 +8,18 @@
   margin-bottom: 30px;
 }
 
+.contacts{
+  position: relative;
+}
+
+.wrap{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
 .contacts__info {
   display: flex;
   flex-direction: column;
