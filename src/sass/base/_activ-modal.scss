@@ -1,6 +1,7 @@
 .modal.active,
-.overlay.active {
+.overlay.active
+ {
     opacity: 1;
     visibility: visible;
-    transform: translateX(0%);
+    // transform: translateX(0%);
 }

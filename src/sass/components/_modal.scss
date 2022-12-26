@@ -1,4 +1,5 @@
-.backdrop {
+.overlay {
+  visibility: hidden;
   position: fixed;
   top: 0;
   left: 0;
@@ -10,17 +11,21 @@
 
   opacity: 1;
   transition: opacity var(--animation), visibility var(--animation);
+   z-index: 20;
+  
 
-  &.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-  }
+
+  // &.is-hidden {
+  //   opacity: 0;
+  //   pointer-events: none;
+  // }
 
 }
 
 // BUY IT
 
 .modal {
+  visibility: hidden;
   position: relative;
   width: 100%;
   max-width: 280px;
@@ -29,8 +34,8 @@
   border-radius: 10px;
   padding: 28px;
   margin: auto;
-
-  opacity: 1;
+  z-index: 21;
+  opacity: 0;
   transition: transform var(--animation), opacity var(--animation);
 
   @media screen and (min-width: 480px) {
