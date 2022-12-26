@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', function() {
         };
     }, false);
 
-
+// Закрытие оверлеем кликом в пустом месте   
     overlay.addEventListener('click', function() {
         document.querySelector('.modal.active').classList.remove('active');
         this.classList.remove('active');
