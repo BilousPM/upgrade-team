@@ -18,13 +18,6 @@
  
     }
 
-    @include for-size (tablet) {
-        top: -114px;
-    }
-
-    @include for-size (desktop) {
-        top: -98px;
-    }
 }
 
 .slide{
@@ -37,8 +30,7 @@
     
     
     @include for-size (tablet) { 
-    display: flex;
-    width:  704px;
+      width:  704px;
     height: 327px;
     border-radius: 18px;
    }
@@ -46,8 +38,7 @@
    
    @include for-size (desktop)
    {
-    display: flex;
-    width:  1013px;
+       width:  1013px;
     height: 422px;
     border-radius: 24px;
     margin: 0 auto;
