@@ -1,15 +1,26 @@
-.ice-swiper{
+.gallery{
+
+}
+
+.ice-swiper {
     position: relative;
-  }
-.swiper {
+}
+.swiper-container {
     position: absolute;
-    z-index: 2;
-    width: 100%;
-    margin: 0 auto;
- 
-   @include for-size (phone) {
-    top: -32px;
+    z-index: 777;
+    left: 0;
+     right: 0;
+     margin: auto;
+     top: -32px;
+   
+    @include for-size (tablet) {
+    top: -114px;
     }
+    @include for-size (desktop) {
+   top: -98px;
+ 
+    }
+} 
 
     @include for-size (tablet) {
         top: -114px;
@@ -21,48 +32,30 @@
 } 
 
 .slide{
-    margin: 0 auto;
-
-    @include for-size (phone) {
-       display: block;
-       width:  280px;
-       height: auto;
-       border-radius: 8px;
-       
-       margin-left: 20px;
-       margin-right: 20px;
+    
+    @include for-size(phone) {
+    width:  280px;
+    height: auto;
+    border-radius: 8px;  
     }
     
-    @include for-size (tablet) {
-       // max-width: 100%;
-       display: flex;
-      width:  704px;
-      height: 327px;
-      border-radius: 18px;
-      margin-left: auto;
-       margin-right: auto;
+    
+    @include for-size (tablet) { 
+    display: flex;
+    width:  704px;
+    height: 327px;
+    border-radius: 18px;
    }
 
    
    @include for-size (desktop)
    {
-        display: flex;
-       width:  1013px;
-        height: 422px;
-      border-radius: 24px;
-      margin-left: auto;
-      margin-right: auto;
-       
- 
+    display: flex;
+    width:  1013px;
+    height: 422px;
+    border-radius: 24px;
+    margin: 0 auto;
    }
 
- }  
- .swiper-image{
-    max-width: 100%;
-    display: block;
-    margin: 0 auto;
-    justify-content: center;
-    background-color: transparent;
- }
-
-
+ } 
+ 
