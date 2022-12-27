@@ -1,132 +1,153 @@
-// .header_sektions {
-//    position: fixed; 
-// }
-
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  // это позиционирование
+  position: fixed;
+  width: 100%;
+  background-color: rgba(132, 161, 120, 0.6);
+  z-index: 10;
+}
 
-    @media screen and (min-width: 1200px) {
-        padding-top: 28px;
-        padding-bottom: 28px;
-    }
+// все остальное вынести в другое правило
+// что флексом был контейнер, а не херер, иначе значки "поползут"
+// .header > .container {
+  // это конец изменений
+.heder__container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  //   дальше правки падингов в соответствии с хедером и макетом---------------------------------------------------------
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 20px;
+    padding-bottom: 16px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    // padding-top: 28px;
+    // padding-bottom: 28px;
+    // ---------------------------------------
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
 }
 
 .header__logo {
-    width: 40px;
-    height: 37px;
-    background-image: url("../images/header/logo-mob.png");
-    background-repeat: no-repeat;
-    background-size: contain;
-    cursor: url("../images/header/vector.png"), pointer;
+  width: 40px;
+  height: 37px;
+  background-image: url('../images/header/logo-mob.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  cursor: url('../images/header/vector.png'), pointer;
 
-    @media screen and (min-width: 768px) {
-        width: 48px;
-        height: 44px;
-        background-image: url("../images/header/logo-tabl.png");
-    }
+  @media screen and (min-width: 768px) {
+    width: 48px;
+    height: 44px;
+    background-image: url('../images/header/logo-tabl.png');
+  }
 
-    @media screen and (min-width: 1200px) {
-        width: 60px;
-        height: 65px;
-        background-image: url("../images/header/logo-des.png");
-    }
-
+  @media screen and (min-width: 1200px) {
+    width: 60px;
+    height: 65px;
+    background-image: url('../images/header/logo-des.png');
+  }
 }
 
 .menu-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    min-height: 32px;
-    min-width: 32px;
-    padding: 17px 0;
-    fill: #ffffff;
-    background-color: transparent;
-    cursor: pointer;
-    border: none;
-    outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    cursor: url("../images/header/vector.png"), pointer;
+  min-height: 32px;
+  min-width: 32px;
+  //   padding: 17px 0;
+  padding: 5px;
+  fill: #ffffff;
+  background-color: transparent;
 
-    @media screen and (min-width: 768px) {
-           padding: 29px 0;
-    }
+  border: none;
+  outline: none;
 
-    @media screen and (min-width: 1200px) {
-        display: none;
-    }
+  cursor: url('../images/header/vector.png'), pointer;
+
+  //   @media screen and (min-width: 768px) {
+  //     padding: 29px 0;
+  //   }
+
+  @media screen and (min-width: 1200px) {
+    display: none;
+  }
 }
 
 .header__button {
-    display: none;
-    position: relative;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 14px;
-    line-height: calc(17 / 14);
+  display: none;
+  position: relative;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: calc(17 / 14);
 
-    padding: 12px 51px 12px 36px;
+  padding: 12px 51px 12px 36px;
 
-    color: $secondary-color;
-    background-color: $interactive-color;
-    border-radius: 10px;
-    border-color: transparent;
+  color: $secondary-color;
+  background-color: $interactive-color;
+  border-radius: 10px;
+  border-color: transparent;
 
-    cursor: url("../images/header/vector.png"), pointer;
+  cursor: url('../images/header/vector.png'), pointer;
 
-    @media screen and (min-width: 768px) {
-            display: block
-        }
+  @media screen and (min-width: 768px) {
+    display: block;
+  }
 
-    &:hover {
-        background-color: $accent-color;
-    }
+  &:hover {
+    background-color: $accent-color;
+  }
 
-    &:focus {
-        background-color: $accent-color;
-        color: $primary-color;
-    }
+  &:focus {
+    background-color: $accent-color;
+    color: $primary-color;
+  }
 }
 
 .arrow {
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    fill: currentColor;
-    right: 35px;
-    top: 50%;
-    transform: translateY(-50%);
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  fill: currentColor;
+  right: 35px;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .header__nav {
-   display: none;
+  display: none;
 
-    @media screen and (min-width: 1200px) {
-           display: flex;
-           gap: 28px;
-        }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    gap: 28px;
+  }
 }
 
-.nav__link{
-    font-weight: 700;
-    font-size: 16px;
-    line-height: calc(20 / 16);
-    text-align: center;
-    color: $primary-color;
+.nav__link {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(20 / 16);
+  text-align: center;
+  color: $primary-color;
 
-    cursor: url("../images/header/vector.png"), pointer;
+  cursor: url('../images/header/vector.png'), pointer;
 
-    &:hover, &:focus {
-        color: $interactive-color;  
-    }
+  &:hover,
+  &:focus {
+    color: $interactive-color;
+  }
 }
 
 .btn__wrap {
-    display: flex;
-    justify-content: center;
-    gap: 32px;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  align-items: center;
 }
