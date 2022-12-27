@@ -12,7 +12,7 @@
   display: flex;
   flex-direction: column;
   padding-top: 12px;
-  padding-left: 32px;
+  padding-right: 20px;
   padding-left: 17px;
   transition: transform $animations-buttons;
 }
@@ -27,8 +27,8 @@
 }
 
 .logo {
-  cursor: url("../images/header/vector.png"), pointer;
-  
+  cursor: url('../images/header/vector.png'), pointer;
+
   @media screen and (min-width: 768px) {
     width: 48px;
     height: 44px;
@@ -42,7 +42,13 @@
   cursor: pointer;
   border: none;
   outline: none;
-  margin-right: 20px;
+  margin-right: 10px;
+  margin-top: 8px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 12px;
+    margin-right: 12px;
+  }
 }
 
 .menu__list {
@@ -73,26 +79,10 @@
     font-size: 48px;
     line-height: calc(59 / 48);
   }
-}
 
-.accent {
-  color: $secondary-color;
-}
-
-.menu__link-accent {
-  font-weight: 700;
-  font-size: 32px;
-  line-height: calc(39 / 32);
-  color: $secondary-color;
-
-  display: block;
-  gap: 32px;
-  align-items: center;
-  text-align: center;
-
-  @media screen and (min-width: 768px) {
-    font-weight: 700;
-    font-size: 48px;
+  &:hover,
+  &:focus {
+    color: $secondary-color;
   }
 }
 
