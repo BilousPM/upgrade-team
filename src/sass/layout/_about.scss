@@ -143,6 +143,13 @@
 }
 .about__text--notMargin {
   margin-bottom: 0;
+  display: none;
+
+   @media screen and (min-width: 768px) {
+    // font-size: 16px;
+    // line-height: calc(28 / 14);
+    display: block;
+  }
 }
 .about__button {
   font-weight: 600;

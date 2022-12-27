@@ -82,16 +82,13 @@
     @include only-tablet {
       font-size: 26px;
       line-height: calc(32 / 26);
+      letter-spacing: 0.04em;
     }
 
     @include only-desktop {
       font-weight: 400;
       font-size: 30px;
       line-height: calc(57 / 30);
-    }
-
-    @include tablet-and-desktop {
-      letter-spacing: 0.04em;
     }
 
     &:not(:last-child) {
