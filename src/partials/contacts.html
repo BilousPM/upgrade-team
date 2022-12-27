@@ -1,12 +1,12 @@
 <!-- прибрано клас  section -->
-<section class="contacts" id="contacts">
+<section class="contacts">
   <!-- додано клас  contacts__wrapper-->
   <div class="contacts__wrapper container">
     <!-- кінець змін -->
 
     <h2 class="section__title visually__hidden">Contacts</h2>
     <ul class="contacts__list list">
-      <li class="contacts__item">
+      <li class="contacts__item" id="contacts">
         <p class="contacts__text contact__category">Cafe</p>
         <ul class="contacts__info list">
           <li class="contacts__block">
@@ -157,7 +157,7 @@
 
     <ul class="contacts__btnList list">
       <li>
-        <button class="button">
+        <button class="button js-open-modal" type="button" data-modal="3">
           <span>Our Locations</span>
           <svg class="button__icon" width="12" height="12">
             <use href="./images/contacts/symbol-defs.svg#icon-arrow"></use>
@@ -165,7 +165,11 @@
         </button>
       </li>
       <li>
-        <button class="button button--secondary">
+        <button
+          class="button button--secondary js-open-modal"
+          type="button"
+          data-modal="4"
+        >
           <span>Franchise</span>
           <svg class="button__icon" width="12" height="12">
             <use href="./images/contacts/symbol-defs.svg#icon-arrow"></use>

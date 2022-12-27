@@ -4,7 +4,7 @@
 
 .swiper-container {
     position: absolute;
-    z-index: 777;
+    z-index: 10;
     left: 0;
      right: 0;
      margin: auto;
@@ -25,7 +25,7 @@
     @include for-size(phone) {
     width:  280px;
     height: auto;
-    border-radius: 8px;  
+    border-radius: 8px;
     }
     
     
