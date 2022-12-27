@@ -1,33 +1,17 @@
-.header {
-  // это позиционирование
-  position: fixed;
-  width: 100%;
-  background-color: rgba(132, 161, 120, 0.6);
-  z-index: 20;
-}
-
-// все остальное вынести в другое правило
-// что флексом был контейнер, а не херер, иначе значки "поползут"
-// .header > .container {
-  // это конец изменений
 .heder__container{
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  //   дальше правки падингов в соответствии с хедером и макетом---------------------------------------------------------
   padding-top: 12px;
   padding-bottom: 12px;
 
   @media screen and (min-width: 768px) {
     padding-top: 20px;
-    padding-bottom: 16px;
+    padding-bottom: 14px;
   }
 
   @media screen and (min-width: 1200px) {
-    // padding-top: 28px;
-    // padding-bottom: 28px;
-    // ---------------------------------------
     padding-top: 8px;
     padding-bottom: 8px;
   }
@@ -61,7 +45,6 @@
 
   min-height: 32px;
   min-width: 32px;
-  //   padding: 17px 0;
   padding: 5px;
   fill: #ffffff;
   background-color: transparent;
@@ -70,10 +53,6 @@
   outline: none;
 
   cursor: url('../images/header/vector.png'), pointer;
-
-  //   @media screen and (min-width: 768px) {
-  //     padding: 29px 0;
-  //   }
 
   @media screen and (min-width: 1200px) {
     display: none;
@@ -88,7 +67,7 @@
   font-size: 14px;
   line-height: calc(17 / 14);
 
-  padding: 12px 51px 12px 36px;
+  padding: 11px 50px 11px 35px;
 
   color: $secondary-color;
   background-color: $interactive-color;
