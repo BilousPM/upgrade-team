@@ -1,7 +1,6 @@
 .advantages {
   padding-top: 50px;
   padding-bottom: 64px;
-  
 
   @media screen and(min-width: 768px) {
     padding-top: 86px;
@@ -28,7 +27,7 @@
   @media screen and(min-width: 1200px) {
     gap: 32px;
   }
-   position: relative;
+  position: relative;
 }
 
 .advantages__item {
@@ -63,8 +62,9 @@
 
   background-position: center;
   background-repeat: no-repeat;
+
   // Анімація. Якщо поставити її на .advantages__item - буде і текст пульсувати
-  animation: pulsate-fwd 4s ease-in-out infinite both;
+  animation: 13s pulsate-fwd 2.5s ease-in-out 5 both;
 }
 
 .advantages__item--cow::before {
@@ -87,12 +87,6 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   padding-top: 10px;
-  transition: all $transition-duration $timing-function;
-
-  &:hover,
-  &:focus {
-    transform: scale(1.2);
-  }
 
   @media screen and(min-width: 768px) {
     font-size: 48px;
@@ -122,13 +116,14 @@
     line-height: 1.76;
   }
 }
+
 // Анімація
 @keyframes pulsate-fwd {
   0% {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.2);
+    transform: scale(1.1);
   }
   100% {
     transform: scale(1);

@@ -1,8 +1,10 @@
 $('.one-time').slick({
   dots: true,
   infinite: true,
+  // зміна швидкості пролиствування
+  speed: 700,
   arrows: false,
-  speed: 300,
+  // arrows: ,
   slidesToShow: 1,
-  adaptiveHeight: true
+  adaptiveHeight: true,
 });
