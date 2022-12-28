@@ -29,10 +29,9 @@
 
   margin-bottom: 30px;
 
-  @media screen and (min-width: 1200px) {
+   @media screen and (min-width: 1200px) {
       gap: 32px;
     }
-    
 }
 
 .contacts__info {
@@ -68,23 +67,18 @@
   background-color: #fcfcfc;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
-  
 
   // зміни ---------------------------------------------------
+  // max-width: 280px;
   width: 280px;
   max-height: 412px;
 
   @media screen and(min-width: 768px) {
     max-height: 537px;
-    transition: transform $transition-duration $timing-function;
-
-    &:hover {
-        transform: translateY(-15px);
-    }
   }
 
   @media screen and(min-width: 1200px) {
-    min-width: 368px;
+    max-height: 542px;
   }
   // кінець поточних змін --------------------------------------
 }
@@ -215,7 +209,9 @@
   .contacts__item {
     // змінено підінги згідно макету ---------------------------------
     padding: 40px 32px 24px 32px;
-    max-width: 224px;
+    // max-width: 224px;
+    // width: calc((100% - 32px) / 3);
+    width: calc(100%/3);
   }
 
   .contacts__block {
@@ -284,8 +280,8 @@
     // змінено пвдінги згідно макету ---------------------------
     padding: 40px;
 
-    max-width: 368px;
-
+    // max-width: 368px;
+   
     // додано колір. Хоча можливо це помилка на макеті -------------
     background-color: #ffffff;
   }
