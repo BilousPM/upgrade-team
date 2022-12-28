@@ -68,11 +68,7 @@
   background-color: #fcfcfc;
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
-  transition: transform $transition-duration $timing-function;
-
-    &:hover {
-        transform: translateY(-15px);
-    }
+  
 
   // зміни ---------------------------------------------------
   width: 280px;
@@ -80,6 +76,11 @@
 
   @media screen and(min-width: 768px) {
     max-height: 537px;
+    transition: transform $transition-duration $timing-function;
+
+    &:hover {
+        transform: translateY(-15px);
+    }
   }
 
   @media screen and(min-width: 1200px) {
