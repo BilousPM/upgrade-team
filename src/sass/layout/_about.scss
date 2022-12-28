@@ -104,10 +104,15 @@
   border-radius: 50%;
 }
 .about__div {
+  padding-left: 28px;
+  padding-right: 28px;
+
   @media screen and (min-width: 768px) {
     width: 336px;
     text-align: start;
     margin-top: 80px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   @media screen and (min-width: 1200px) {
@@ -144,7 +149,7 @@
   margin-bottom: 0;
   display: none;
 
-   @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) {
     // font-size: 16px;
     // line-height: calc(28 / 14);
     display: block;
@@ -166,6 +171,16 @@
 
   display: flex;
   align-items: center;
+
+  transition: background-color 250ms linear, color 250ms linear;
+
+  &:hover {
+    background-color: $accent-color;
+  }
+  &:focus {
+    background-color: $accent-color;
+    color: $primary-color;
+  }
 
   @media screen and (min-width: 768px) {
     margin-top: 32px;
