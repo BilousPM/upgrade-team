@@ -79,9 +79,11 @@
   </head>
 
   <body>
+    
     <!-- Юрій Дегтяренко -->
     <include src="./partials/header.html"></include>
-
+    <!-- Vladimir Minakov -->
+    <include src="./partials/pop-up.html"></include>
     <main>
       <!-- Андрій -->
       <include src="./partials/hero.html"></include>
@@ -97,7 +99,9 @@
       <include src="./partials/reviews.html"></include>
       <!-- Khelen Ukandu -->
       <include src="./partials/contacts.html"></include>
-    </main>
+       
+    
+  </main>
 
     <!-- Vitalii Prokopenko -->
     <include src="./partials/footer.html"></include>
@@ -105,7 +109,9 @@
     <include src="./partials/modal.html"></include>
     <!-- Анна Атилган -->
     <include src="./partials/mobile.html"></include>
-
+    
+    
+  
     <!-- slick jqury -->
     <script
       type="text/javascript"
@@ -136,7 +142,10 @@
       integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
       crossorigin="anonymous"
     ></script>
-
+    <script type="text/javascript">
+      var delay_popup = 5000;
+      setTimeout("document.getElementById('parent_popup').style.display='block'", delay_popup);
+    </script>
     <!-- base js -->
     <script src="./js/mobile-menu.js"></script>
     <script src="./js/slick.js"></script>
