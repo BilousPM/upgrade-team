@@ -64,7 +64,7 @@
   background-position: center;
   background-repeat: no-repeat;
   // Анімація. Якщо поставити її на .advantages__item - буде і текст пульсувати
-  animation: pulsate-fwd 4.5s ease-in-out infinite both;
+  animation: pulsate-fwd 4s ease-in-out infinite both;
 }
 
 .advantages__item--cow::before {
@@ -91,7 +91,7 @@
 
   &:hover,
   &:focus {
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
 
   @media screen and(min-width: 768px) {
@@ -128,7 +128,7 @@
     transform: scale(1);
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.2);
   }
   100% {
     transform: scale(1);
