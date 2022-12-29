@@ -79,10 +79,11 @@
   margin-bottom: 0;
 }
 
-.backdrop.is-hidden .modal {
-  opacity: 0;
-  transform: translate(-50%, -50%) scale(0.9);
-}
+
+// .backdrop.is-hidden .modal {
+//   opacity: 0;
+//   transform: translate(-50%, -50%) scale(0.9);
+// }
 
 .modal-form-lable {
   display: flex;
