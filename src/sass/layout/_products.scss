@@ -28,7 +28,7 @@
 
   // Desktop
 
-    // @media screen and (min-width: 1200px){
+  // @media screen and (min-width: 1200px){
 
   @media screen and (max-width: 1200px) {
     background-image: url(../images/products/bg_desk@1x-min.png);
@@ -115,7 +115,7 @@
     justify-content: center;
 
     @media screen and (min-width: 768px) {
-      width: calc(100%/3) ;
+      width: calc(100% / 3);
     }
   }
 
@@ -253,6 +253,7 @@
 
   &__wrap {
     display: flex;
+    // position: relative;
     flex-direction: column;
     border-radius: 24px;
     height: 420px;
@@ -326,11 +327,13 @@
   }
 
   &__btn {
+    // position: absolute;
     display: block;
     border: none;
     margin-right: auto;
     margin-left: auto;
     padding: 0px 0px 16px 0px;
+    bottom: 0;
 
     @media screen and (min-width: 768px) {
       padding-bottom: 12px;
