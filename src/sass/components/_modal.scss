@@ -17,7 +17,7 @@
 
   // &.is-hidden {
   //   opacity: 0;
-  //   pointer-events: none;
+    // pointer-events: none;
   // }
 
 }
@@ -43,6 +43,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
+    padding: 32px 54px;
 
   }
 
@@ -215,7 +216,7 @@
 
 }
 
-.close-btn {
+.modal-close-btn {
   position: absolute;
   top: 12px;
   right: 12px;
@@ -269,7 +270,7 @@
   }
 }
 
-.modal-productsitem {
+.product-categories .products__item {
   gap: 32px;
 
   &:not(:last-child) {
@@ -287,6 +288,8 @@
   height: 139px;
   transform: translate(0%, -45%);
 }
+
+
 
 .product-categories .products__picture--green-section::after,
 .product-categories .products__picture--orange-section::after,
@@ -403,6 +406,7 @@
 
 
 //  Franchise modal
+
 
 .franchise-text {
   margin-bottom: 24px;
