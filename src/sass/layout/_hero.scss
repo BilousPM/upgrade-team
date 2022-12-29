@@ -17,6 +17,8 @@
 }
 
 .hero__container {
+  // додала reletive для морозива
+  position: relative;
   background-size: contain;
   background-position: bottom;
   background-repeat: no-repeat; 
