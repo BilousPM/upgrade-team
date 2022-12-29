@@ -12,7 +12,6 @@
   opacity: 1;
   transition: opacity var(--animation), visibility var(--animation);
    z-index: 20;
-  
 }
 
 // BUY IT
@@ -34,11 +33,11 @@
   transition: transform var(--animation), opacity var(--animation);
 
   @media screen and (min-width: 480px) {
-    // position: absolute;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%) scale(1);
-    // padding: 32px 54px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    padding: 32px 54px;
     max-width: 420px;
 
   }
