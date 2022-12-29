@@ -187,7 +187,7 @@
   line-height: calc(15/12);
   border-radius: 10px;
   border: none;
-  cursor: pointer;
+  cursor: $cursor-pointer;
 
 
   transition: background-color 250ms linear, color 250ms linear;
@@ -226,7 +226,7 @@
   border: none;
   color: $secondary-color;
   padding: 0;
-  cursor: pointer;
+  cursor: $cursor-pointer;
 
   &-icon {
     fill: currentColor;
@@ -250,6 +250,7 @@
   outline: 2px solid transparent;
   outline-offset: -2px;
   transition: outline-color 250ms linear;
+  cursor: $cursor-pointer;
 
 
 }
@@ -286,6 +287,8 @@
   width: 132px;
   height: 139px;
   transform: translate(0%, -45%);
+  cursor: $cursor-pointer;
+  
 }
 
 .product-categories .products__picture--green-section::after,
@@ -304,6 +307,7 @@
   height: 136px;
   width: 132px;
   border-radius: 15px;
+  cursor: $cursor-pointer;
 
   &:not(:last-child) {
     margin-bottom: 20px;

@@ -79,7 +79,6 @@
   </head>
 
   <body>
-    
     <!-- Юрій Дегтяренко -->
     <include src="./partials/header.html"></include>
     <!-- Vladimir Minakov -->
@@ -99,9 +98,7 @@
       <include src="./partials/reviews.html"></include>
       <!-- Khelen Ukandu -->
       <include src="./partials/contacts.html"></include>
-       
-    
-  </main>
+    </main>
 
     <!-- Vitalii Prokopenko -->
     <include src="./partials/footer.html"></include>
@@ -109,9 +106,7 @@
     <include src="./partials/modal.html"></include>
     <!-- Анна Атилган -->
     <include src="./partials/mobile.html"></include>
-    
-    
-  
+
     <!-- slick jqury -->
     <script
       type="text/javascript"
@@ -144,10 +139,39 @@
     ></script>
     <script type="text/javascript">
       var delay_popup = 5000;
-      setTimeout("document.getElementById('parent_popup').style.display='block'", delay_popup);
+      setTimeout(
+        "document.getElementById('parent_popup').style.display='block'",
+        delay_popup
+      );
     </script>
     <!-- base js -->
     <script src="./js/mobile-menu.js"></script>
     <script src="./js/slick.js"></script>
+
+    <!-- Scroll button -->
+    <script>
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          document.getElementById('myBtn').style.display = 'block';
+        } else {
+          document.getElementById('myBtn').style.display = 'none';
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+    <!-- Scroll button -->
   </body>
 </html>
