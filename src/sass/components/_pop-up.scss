@@ -7,6 +7,8 @@
     right: 0;
     bottom: 0;
     left: 0;
+    animation: fade .6s;
+    overflow: auto;
   }
 
   #popup { 
@@ -31,7 +33,7 @@
        {
            width:  1013px;
         height: 404px;
- 
+       animation: fade 3.6s;
        }
 // ----------------підправив трішки ширину, бо не зовсім добре на всіх ширинах відпрацьовує--------------
     width: 90%;
@@ -53,9 +55,9 @@
         right: -8px;
         top: -8px;
         width: 8px;
-        border-radius: 6px;
-        height: 8px;
-        line-height: 8px;
+        border-radius: 12px;
+        height: 10px;
+        line-height: 10px;
         }
         @media screen and (min-width: 480px) and (max-width: 769px) {
             right: -18px;
@@ -84,7 +86,12 @@
         height: 24px;
         line-height: 24px;
        }
+       animation: fade .6s;    
 }
 .close:hover {
     background-color: rgba(280, 2154,192, 0.8);
+}
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1 }
 }
