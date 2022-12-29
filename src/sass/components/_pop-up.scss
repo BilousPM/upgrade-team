@@ -1,5 +1,5 @@
 #parent_popup {
-    background-color: rgba(36, 63, 118, 0.7);
+    background-color: rgba(85, 86, 38, 0.7);
     display: none;
     position: fixed;
     z-index: 99999;
@@ -10,55 +10,80 @@
   }
 
   #popup { 
-    background: rgb(92, 188, 232);
+    background: rgb(280,215,192);
     
     @include for-size(phone) {
         width:  280px;
         height: auto;
        
         }
-   
+        @media screen and (min-width: 480px) and (max-width: 769px) {
+         width: 440px;
+        }
         @include for-size (tablet) { 
           width:  704px;
-        height: 405x;
+        height: 405x; 
+           
         }
 
        @include for-size (desktop)
        {
            width:  1013px;
-        height: 582px;
+        height: 404px;
  
        }
 
 
     margin: 5% auto;
-    border: 1px solid rgb(52, 113, 188);
     position: relative;
     /*--CSS3 Тени для Блока--*/
-    box-shadow: 0px 0px 20px rgb(28, 7, 135);
+    border: 1px solid rgb(29, 33, 18);
+    box-shadow: 0px 0px 20px rgb(58, 56, 71);
     /*--CSS3 Скругленные углы--*/
-color: #000;
+    color: #000;
      border-radius: 15px;
   }
   .close {
-    background-color: rgba(0, 0, 0, 0.4);
-    border: 2px solid rgb(70, 119, 204);
-    height: 24px;
-    line-height: 24px;
     position: absolute;
-    right: -24px;
+    border: 3px solid rgb(143, 157, 25);
+    background-color: rgba(79, 35, 35, 0.4);
     cursor: pointer;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 14px;
-    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
-    top: -24px;
-    width: 24px;
-    border-radius: 15px;
-     box-shadow: 1px 1px 3px #000;
+    @include for-size(phone) {
+        right: -8px;
+        top: -8px;
+        width: 8px;
+        border-radius: 6px;
+        height: 8px;
+        line-height: 8px;
+        }
+        @media screen and (min-width: 480px) and (max-width: 769px) {
+            right: -18px;
+            top: -18px;
+            width: 18px;
+            border-radius: 12px;
+            height: 18px;
+            line-height: 18px; 
+           }
+        @include for-size (tablet) { 
+            right: -18px;
+            top: -18px;
+            width: 18px;
+            border-radius: 12px;
+            height: 18px;
+            line-height: 18px; 
+          
+        }
+
+       @include for-size (desktop)
+       {
+        right: -24px;
+        top: -24px;
+        width: 24px;
+        border-radius: 15px;
+        height: 24px;
+        line-height: 24px;
+       }
 }
 .close:hover {
-    background-color: rgba(61, 155, 214, 0.8);
+    background-color: rgba(280, 2154,192, 0.8);
 }
