@@ -23,7 +23,7 @@
   background-image: url('../images/header/logo-mob.png');
   background-repeat: no-repeat;
   background-size: contain;
-  cursor: url('../images/header/vector.png'), pointer;
+  cursor: $cursor-pointer;
 
   @media screen and (min-width: 768px) {
     width: 48px;
@@ -52,7 +52,7 @@
   border: none;
   outline: none;
 
-  cursor: url('../images/header/vector.png'), pointer;
+  cursor: $cursor-pointer;
 
   @media screen and (min-width: 1200px) {
     display: none;
@@ -74,7 +74,7 @@
   border-radius: 10px;
   border-color: transparent;
 
-  cursor: url('../images/header/vector.png'), pointer;
+  cursor: $cursor-pointer;
 
   @media screen and (min-width: 768px) {
     display: block;
@@ -117,7 +117,7 @@
   text-align: center;
   color: $primary-color;
 
-  cursor: url('../images/header/vector.png'), pointer;
+  cursor: $cursor-pointer;
 
   &:hover,
   &:focus {

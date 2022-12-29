@@ -105,7 +105,7 @@
   border-color: transparent;
   margin: auto;
   margin-bottom: 64px;
-  cursor: pointer;
+  cursor: $cursor-pointer;
 
   &:hover {
     background-color: $accent-color;
