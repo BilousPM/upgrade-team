@@ -97,7 +97,7 @@
 
   outline: 2px solid transparent;
   outline-offset: -2px;
-  transition: outline 250ms linear;
+  transition: outline 250ms linear, box-shadow 250ms linear;
 
   &::placeholder {
     font-weight: 400;
@@ -108,6 +108,7 @@
 
   &:focus {
     outline-color: $accent-color;
+    box-shadow: 0 0 0 3px rgba(10, 136, 23, 0.2);
   }
 
   @media screen and (min-width: 768px) {
@@ -120,7 +121,8 @@
   }
 
   &:not(:placeholder-shown):required:invalid {
-    border-color: red;
+    border: 2px solid red;
+    
   }
 }
 
@@ -147,6 +149,7 @@
 
   &:focus {
     outline-color: $accent-color;
+    box-shadow: 0 0 0 3px rgba(10, 136, 23, 0.2);
   }
 
   @media screen and (min-width: 768px) {
@@ -242,20 +245,9 @@
 .modal-form-chekbox {
   appearance: none;
   border-radius: 15px;
-  width: 134px;
-  height: 138px;
-
-  outline: 2px solid transparent;
-  outline-offset: -2px;
-  transition: outline-color 250ms linear;
+  width: 132px;
+  height: 136px;
   cursor: $cursor-pointer;
-
-
-}
-
-.modal-productsitem .modal-form-chekbox:checked {
-  outline-color: $accent-color;
-  box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
 }
 
 .product-categories {
@@ -318,18 +310,40 @@
   }
 }
 
+
+
 .modal-productswrap--green-section {
-  background: transparent;
+  background-color: transparent;
   border: 2px solid #96AF8C;
-  box-shadow: (0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+  box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
   
 }
 
+.modal-form-chekbox:checked + .modal-productswrap--green-section   {
+  background-color: #96AF8C;
+  border: none;
+}
+
+.modal-productswrap--orange-section {
+  background-color: transparent;
+  border: 2px solid #efd478;
+  box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1); 
+}
+
+.modal-form-chekbox:checked + .modal-productswrap--orange-section {
+  background-color: #efd478;
+  border: none;
+}
+
 .modal-productswrap--terracotta-section {
-  background: transparent;
+  background-color: transparent;
   border: 2px solid #D6936D;
-  box-shadow: (0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
- 
+  box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
+}
+
+.modal-form-chekbox:checked + .modal-productswrap--terracotta-section {
+  background-color: #D6936D;
+  border: none;
 }
 
 .modal-productssubtitle {
@@ -338,7 +352,7 @@
   color: $secondary-color;
   font-size: 16px;
   line-height: calc(20/16);
-  padding-top: 88px;
+  padding-top: 96px;
   text-align: center;
 }
 
