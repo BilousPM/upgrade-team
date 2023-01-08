@@ -6,12 +6,11 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
-
-  overflow-y: scroll;
+  
 
   opacity: 1;
   transition: opacity var(--animation), visibility var(--animation);
-   z-index: 20;
+  z-index: 20;
 }
 
 // BUY IT
@@ -29,19 +28,21 @@
   z-index: 21;
   opacity: 0;
   transition: transform var(--animation), opacity var(--animation);
+    overflow-y: scroll;
+    max-height: 100vh;
 
   @media screen and (min-width: 480px) {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    padding: 32px 54px;
     max-width: 420px;
 
   }
 
   @media screen and (min-width: 768px) {
     max-width: 568px;
+    width: 100%;
     padding: 32px 54px;
   }
 
@@ -73,10 +74,6 @@
   display: block;
 }
 
-// .backdrop.is-hidden .modal {
-//   opacity: 0;
-//   transform: translate(-50%, -50%) scale(0.9);
-// }
 
 .modal-form-lable {
   display: flex;
@@ -97,7 +94,7 @@
 
   outline: 2px solid transparent;
   outline-offset: -2px;
-  transition: outline 250ms linear;
+  transition: outline 250ms linear, box-shadow 250ms linear;
 
   &::placeholder {
     font-weight: 400;
@@ -108,6 +105,7 @@
 
   &:focus {
     outline-color: $accent-color;
+    box-shadow: 0 0 0 3px rgba(10, 136, 23, 0.2);
   }
 
   @media screen and (min-width: 768px) {
@@ -120,7 +118,8 @@
   }
 
   &:not(:placeholder-shown):required:invalid {
-    border-color: red;
+    border: 2px solid red;
+    
   }
 }
 
@@ -147,6 +146,7 @@
 
   &:focus {
     outline-color: $accent-color;
+    box-shadow: 0 0 0 3px rgba(10, 136, 23, 0.2);
   }
 
   @media screen and (min-width: 768px) {
@@ -242,20 +242,9 @@
 .modal-form-chekbox {
   appearance: none;
   border-radius: 15px;
-  width: 134px;
-  height: 138px;
-
-  outline: 2px solid transparent;
-  outline-offset: -2px;
-  transition: outline-color 250ms linear;
+  width: 132px;
+  height: 136px;
   cursor: $cursor-pointer;
-
-
-}
-
-.modal-productsitem .modal-form-chekbox:checked {
-  outline-color: $accent-color;
-  box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
 }
 
 .product-categories {
@@ -318,18 +307,40 @@
   }
 }
 
+
+
 .modal-productswrap--green-section {
-  background: transparent;
+  background-color: transparent;
   border: 2px solid #96AF8C;
-  box-shadow: (0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
+  box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
   
 }
 
+.modal-form-chekbox:checked + .modal-productswrap--green-section   {
+  background-color: #96AF8C;
+  border: none;
+}
+
+.modal-productswrap--orange-section {
+  background-color: transparent;
+  border: 2px solid #efd478;
+  box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1); 
+}
+
+.modal-form-chekbox:checked + .modal-productswrap--orange-section {
+  background-color: #efd478;
+  border: none;
+}
+
 .modal-productswrap--terracotta-section {
-  background: transparent;
+  background-color: transparent;
   border: 2px solid #D6936D;
-  box-shadow: (0px 5.26027px 19.726px rgba(212, 20, 67, 0.1));
- 
+  box-shadow: 0px 5.26027px 19.726px rgba(212, 20, 67, 0.1);
+}
+
+.modal-form-chekbox:checked + .modal-productswrap--terracotta-section {
+  background-color: #D6936D;
+  border: none;
 }
 
 .modal-productssubtitle {
@@ -338,7 +349,7 @@
   color: $secondary-color;
   font-size: 16px;
   line-height: calc(20/16);
-  padding-top: 88px;
+  padding-top: 96px;
   text-align: center;
 }
 
@@ -443,7 +454,6 @@
   position: relative;
   width: 132px;
   height: 132px;
-  background-color: #9CBE8F;
   border-radius: 50%;
   display: flex;
   margin-bottom: 22px;
@@ -486,7 +496,6 @@
   height: 43px;
   padding-top: 8px;
   padding-bottom: 8px;
-  background-color: #9CBE8F;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -502,7 +511,6 @@
   width: 53px;
   height: 72px;
   color: $secondary-color;
-  border: 2px solid #9CBE8F;
   border-radius: 40px;
   text-align: center;
   display: flex;
@@ -511,6 +519,86 @@
   padding-bottom: 8px;
 }
 
+.ice-cream-section {
+
+  & .image-wrapper {
+  background-color: #9CBE8F;
+  }
+  
+  & .weight {
+  background-color: #9CBE8F;
+  }
+
+  & .include {
+  border: 2px solid #9CBE8F;
+  }
+}
+
+.ice-coffee-section {
+
+  & .image-wrapper {
+  background-color: #efd478;
+  }
+
+  & .weight {
+  background-color: #efd478;
+  }
+
+  & .include {
+  border: 2px solid #efd478;
+  }
+
+  & .modal-form-field {
+    border: 1px solid #efd478;
+  }
+
+  & .modal-form-field:focus {
+    outline-color: #efd478;
+    box-shadow: 0 0 0 3px rgba(239, 212, 120, 0.2);
+  }
+
+  & .modal-form-message {
+    border: 1px solid #efd478;
+  }
+
+  & .modal-form-message:focus {
+    outline-color: #efd478;
+    box-shadow: 0 0 0 3px rgba(239, 212, 120, 0.2);
+  }
+}
+
+.milkshakes-section {
+
+  & .image-wrapper {
+  background-color: #D6936D;
+  }
+
+  & .weight {
+    background-color: #D6936D;
+  }
+
+  & .include {
+    border: 2px solid #D6936D;
+  }
+
+  & .modal-form-field {
+    border: 1px solid #D6936D;
+  }
+
+  & .modal-form-field:focus {
+    outline-color: #d6936d;
+    box-shadow: 0 0 0 3px rgba(214, 147, 109, 0.2);
+  }
+
+  & .modal-form-message {
+    border: 1px solid #D6936D;
+  }
+
+  & .modal-form-message:focus {
+    outline-color: #D6936D;
+    box-shadow: 0 0 0 3px rgba(214, 147, 109, 0.2);
+  }
+}
 
 .ingredients {
   margin-bottom: 40px;
